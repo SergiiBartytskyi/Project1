@@ -17,13 +17,13 @@
 					photo
 				</a>
 
-				<ul class="site-nav list">
+				<ul class="header__menu list">
 					<li><a class="link current" href="">Features</a></li>
 					<li><a class="link" href="">Pricing</a></li>
 					<li><a class="link" href="">Community</a></li>
 					<li><a class="link" href="">Support</a></li>
 				</ul>
-				<ul class="auth-nav list">
+				<ul class="header__auth list">
 					<li><a class="button secondary" href="">Log in</a></li>
 					<li><a class="button primary" href="">Register</a></li>
 				</ul>
@@ -34,13 +34,13 @@
 		<main>
 			<!-- Hero -->
 			<section class="hero">
-				<h1 class="hero-title">The largest community of photo enthusiasts</h1>
+				<h1 class="hero__title">The largest community of photo enthusiasts</h1>
 				<button type="button" class="button primary">Join Today</button>
 			</section>
 
 			<!-- Advantages -->
 			<section class="section">
-				<h2 class="section-title">Snap photos and share like <br />never before</h2>
+				<h2 class="section__title">Snap photos and share like <br />never before</h2>
 				<ul class="advantages___list list">
 					<li>
 						<h3 class="title">Sed ut perspiciatis</h3>
@@ -79,8 +79,8 @@
 
 			<!-- Examples of work -->
 			<section class="section">
-				<h2 class="section-title">Examples of work</h2>
-				<ul class="examples-list list">
+				<h2 class="section__title">Examples of work</h2>
+				<ul class="examples__list list">
 					<li>
 						<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
 						<h3 class="title">Sed ut perspiciatis unde omnis</h3>
@@ -102,9 +102,9 @@
 
 			<!-- Testimonial -->
 			<section class="section">
-				<h2 class="section-title">You’re in good company</h2>
+				<h2 class="section__title">You’re in good company</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
-				<ul class="testimonial-list list">
+				<ul class="testimonial__list list">
 					<li>
 						<a href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
@@ -150,9 +150,9 @@
 
 			<!-- Signup -->
 			<section class="section">
-				<h2 class="section-title">Signup</h2>
+				<h2 class="section__title">Signup</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-				<ul class="signup-list list">
+				<ul class="signup__list list">
 					<li>
 						<a href="">Join Today</a>
 					</li>
@@ -165,56 +165,54 @@
 
 		<!-- Footer -->
 		<footer>
-			<nav>
-				<!--logo-->
-				<a href="./index.html">
-					<img src="./images/logo_1-2.svg" alt="part of the logo_1" />
-					<img src="./images/logo_2-2.svg" alt="part of the logo_2" />
-					photo
-				</a>
+			<!--logo-->
+			<a href="./index.html">
+				<img src="./images/logo_1-2.svg" alt="part of the logo_1" />
+				<img src="./images/logo_2-2.svg" alt="part of the logo_2" />
+				photo
+			</a>
 
-				<ul class="footer-nav list">
-					<li>
-						<h3 class="title">Mobile app</h3>
-						<ul>
-							<li><a class="link" href="">Features</a></li>
-							<li><a class="link" href="">Live share</a></li>
-							<li><a class="link" href="">Video record</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3 class="title">Community</h3>
-						<ul>
-							<li><a class="link" href="">Featured artists</a></li>
-							<li><a class="link" href="">The Portal</a></li>
-							<li><a class="link" href="">Live events</a></li>
-						</ul>
-					</li>
-					<li>
-						<h3 class="title">Company</h3>
-						<ul>
-							<li><a class="link" href="">About us</a></li>
-							<li><a class="link" href="">Contact us</a></li>
-							<li><a class="link" href="">History</a></li>
-						</ul>
-					</li>
-				</ul>
+			<ul class="footer__menu list">
+				<li>
+					<h3 class="title">Mobile app</h3>
+					<ul class="footer__submenu list">
+						<li><a class="link" href="">Features</a></li>
+						<li><a class="link" href="">Live share</a></li>
+						<li><a class="link" href="">Video record</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3 class="title">Community</h3>
+					<ul class="footer__submenu list">
+						<li><a class="link" href="">Featured artists</a></li>
+						<li><a class="link" href="">The Portal</a></li>
+						<li><a class="link" href="">Live events</a></li>
+					</ul>
+				</li>
+				<li>
+					<h3 class="title">Company</h3>
+					<ul class="footer__submenu list">
+						<li><a class="link" href="">About us</a></li>
+						<li><a class="link" href="">Contact us</a></li>
+						<li><a class="link" href="">History</a></li>
+					</ul>
+				</li>
+			</ul>
 
-				<ul>
-					<li><button type="button" class="button primary">Register</button></li>
-					<li><button type="button" class="button secondary">Log in</button></li>
-				</ul>
-			</nav>
+			<ul class="footer__actions list">
+				<li><button type="button" class="button primary">Register</button></li>
+				<li><button type="button" class="button secondary">Log in</button></li>
+			</ul>
 
 			<!-- Copyright -->
-			<p>&copy; Photo, Inc. 2023. We love our users!</p>
+			<p class="footer__copyright">&copy; Photo, Inc. 2023. We love our users!</p>
 
-			<p>Follow us:</p>
-			<ul class="list">
-				<li><a href="" aria-label="Facebook link"></a></li>
-				<li><a href="" aria-label="Twitter link"></a></li>
-				<li><a href="" aria-label="Instagram link"></a></li>
-				<li><a href="" aria-label="LinkedIn link"></a></li>
+			<p class="footer__social-title">Follow us:</p>
+			<ul class="footer__social-list list">
+				<li><a href="" aria-label="Facebook link" class="footer__social-link"></a></li>
+				<li><a href="" aria-label="Twitter link" class="footer__social-link"></a></li>
+				<li><a href="" aria-label="Instagram link" class="footer__social-link"></a></li>
+				<li><a href="" aria-label="LinkedIn link" class="footer__social-link"></a></li>
 			</ul>
 		</footer>
 	</body>

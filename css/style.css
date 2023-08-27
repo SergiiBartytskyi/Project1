@@ -18,24 +18,24 @@ body {
 	list-style: none;
 }
 
-.site-nav .link {
+.header__menu .link {
 	color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.header__menu .link.current {
 	color: var(--title-text-color);
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+.header__menu .link:hover,
+.header__menu .link:focus {
 	color: var(--title-text-color);
 }
 /* Hero */
-.hero-title {
+.hero__title {
 	color: var(--title-text-color);
 }
 
 /* Section */
-.section-title {
+.section__title {
 	color: var(--title-text-color);
 }
 
@@ -48,20 +48,20 @@ body {
 .advantages__list .link {
 	color: var(--accent-color);
 }
-.examples-list .title {
+.examples__list .title {
 	color: var(--title-text-color);
 }
 
-.footer-nav .title {
+.footer__menu .title {
 	color: var(--title-text-color);
 }
 
-.footer-nav .link {
+.footer__menu .link {
 	color: var(--primary-text-color);
 }
 
-.footer-nav .link:hover,
-.footer-nav .link:focus {
+.footer__menu .link:hover,
+.footer__menu .link:focus {
 	color: var(--accent-color);
 }
 
