@@ -1,0 +1,81 @@
+:root {
+	--primary-text-color: rgba(0, 0, 0, 0.8);
+	--title-text-color: #000000;
+	--accent-color: #18a0fb;
+	--primary-bg-color: #ffffff;
+}
+
+body {
+	color: var(--primary-text-color);
+	background-color: var(--primary-bg-color);
+}
+
+.logo {
+	color: var(--title-text-color);
+}
+
+.list {
+	list-style: none;
+}
+
+.site-nav .link {
+	color: var(--accent-color);
+}
+
+.site-nav .link.current {
+	color: var(--title-text-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+	color: var(--title-text-color);
+}
+/* Hero */
+.hero-title {
+	color: var(--title-text-color);
+}
+
+/* Section */
+.section-title {
+	color: var(--title-text-color);
+}
+
+/* Adventage */
+
+.advantages__list .title {
+	color: var(--title-text-color);
+}
+
+.advantages__list .link {
+	color: var(--accent-color);
+}
+.examples-list .title {
+	color: var(--title-text-color);
+}
+
+.footer-nav .title {
+	color: var(--title-text-color);
+}
+
+.footer-nav .link {
+	color: var(--primary-text-color);
+}
+
+.footer-nav .link:hover,
+.footer-nav .link:focus {
+	color: var(--accent-color);
+}
+
+.button {
+	color: var(--title-text-color);
+	background-color: var(--primary-bg-color);
+}
+
+.button.primary {
+	color: var(--primary-bg-color);
+	background-color: var(--accent-color);
+}
+
+.button.secondary {
+	color: var(--accent-color);
+	background-color: var(--primary-bg-color);
+}
