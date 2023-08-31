@@ -1,81 +1,263 @@
 :root {
 	--primary-text-color: rgba(0, 0, 0, 0.8);
-	--title-text-color: #000000;
+	--secondary-text-color: #000000;
 	--accent-color: #18a0fb;
 	--primary-bg-color: #ffffff;
 }
 
 body {
+	text-align: left;
+	letter-spacing: -0.015em;
+	font-family: "Montserrat", sans-serif;
 	color: var(--primary-text-color);
 	background-color: var(--primary-bg-color);
 }
 
 .logo {
-	color: var(--title-text-color);
+	font-size: 28px;
+	line-height: 1.1;
+	text-align: center;
+	font-family: "Comfortaa", cursive;
+	color: var(--secondary-text-color);
+}
+
+/* Section */
+.title {
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--secondary-text-color);
+}
+
+.subtitle {
+	font-size: 24px;
+	line-height: 1.5;
+	color: var(--secondary-text-color);
+}
+
+.text {
+	font-size: 18px;
+	line-height: 1.7;
+}
+
+.description {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 1.4;
+	/* text-align: left; */
+}
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
 }
 
 .list {
 	list-style: none;
 }
 
-.header__menu .link {
-	color: var(--accent-color);
+.link {
+	text-decoration: none;
 }
-
-.header__menu .link.current {
-	color: var(--title-text-color);
-}
-.header__menu .link:hover,
-.header__menu .link:focus {
-	color: var(--title-text-color);
-}
-/* Hero */
-.hero__title {
-	color: var(--title-text-color);
-}
-
-/* Section */
-.section__title {
-	color: var(--title-text-color);
-}
-
-/* Adventage */
-
-.advantages__list .title {
-	color: var(--title-text-color);
-}
-
-.advantages__list .link {
-	color: var(--accent-color);
-}
-.examples__list .title {
-	color: var(--title-text-color);
-}
-
-.footer__menu .title {
-	color: var(--title-text-color);
-}
-
-.footer__menu .link {
-	color: var(--primary-text-color);
-}
-
-.footer__menu .link:hover,
-.footer__menu .link:focus {
-	color: var(--accent-color);
-}
-
 .button {
-	color: var(--title-text-color);
+	width: 130px;
+	height: 40px;
+	font-family: inherit;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: inherit;
+}
+
+.button.hero {
+	width: 192px;
+	height: 52px;
+	font-size: 17px;
+}
+.button.primary {
+	color: var(--accent-color);
 	background-color: var(--primary-bg-color);
 }
 
-.button.primary {
+.button.secondary {
 	color: var(--primary-bg-color);
 	background-color: var(--accent-color);
 }
 
-.button.secondary {
+/* Header */
+
+.header {
+}
+
+.header__nav {
+}
+
+.header__logo {
+}
+
+.header__menu {
+}
+.header__item {
+}
+.header__link {
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2;
+	text-align: center;
+
+	color: var(--secondary-text-color);
+}
+
+.header__link.current {
 	color: var(--accent-color);
-	background-color: var(--primary-bg-color);
+}
+
+.header__link:hover,
+.header__link:focus {
+	color: var(--accent-color);
+}
+
+.header__auth {
+}
+/* Hero */
+.hero__title {
+	font-size: 56px;
+	font-weight: 400;
+	line-height: 1.4;
+	text-align: center;
+}
+
+/* Adventage */
+
+.advantages__title {
+}
+
+.advantages___list {
+}
+
+.advantages___item {
+}
+
+.advantages__subtitle {
+}
+
+.advantages__text {
+	font-size: 18px;
+	line-height: 1.7;
+}
+
+/* Examples */
+
+.examples__title {
+}
+
+.examples__list {
+}
+
+.examples__item {
+}
+
+.examples__subtitle {
+}
+
+.examples__text {
+}
+
+/* Testimonial */
+
+.testimonial__title {
+	text-align: center;
+}
+
+.testimonial__description {
+	text-align: center;
+}
+
+.testimonial__list {
+}
+
+.testimonial__item {
+}
+
+.testimonial__link {
+}
+
+/* Signup */
+
+.signup__title {
+}
+
+.signup__text {
+}
+
+.signup__list {
+}
+
+.signup__item {
+}
+
+/* Footer */
+
+.footer__logo {
+}
+
+.footer__menu {
+}
+
+.menu__item {
+}
+
+.menu__subtitle {
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.footer__submenu {
+}
+
+.submenu__item {
+}
+
+.submenu__link {
+	font-size: 15px;
+	line-height: 1.6;
+	color: currentColor;
+}
+
+.footer__actions {
+}
+
+.actions__item {
+}
+
+.footer__copyright {
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.footer__text {
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.footer__socials {
+}
+
+.socials__item {
+}
+
+.socials__link {
+}
+
+.submenu__link:hover,
+.submenu__link:focus {
+	color: var(--accent-color);
 }

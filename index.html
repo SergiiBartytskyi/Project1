@@ -4,28 +4,34 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Project 1</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
 		<!-- Шапка -->
-		<header>
+		<header class="header">
 			<nav class="header__nav">
 				<!--logo-->
-				<a class="logo" href="./index.html">
+				<a class="header__logo logo link" href="./index.html">
 					<img src="./images/logo_1-2.svg" alt="part of the logo_1" />
 					<img src="./images/logo_2-2.svg" alt="part of the logo_2" />
 					photo
 				</a>
 
 				<ul class="header__menu list">
-					<li><a class="link current" href="">Features</a></li>
-					<li><a class="link" href="">Pricing</a></li>
-					<li><a class="link" href="">Community</a></li>
-					<li><a class="link" href="">Support</a></li>
+					<li class="header__item"><a class="header__link link current" href="">Features</a></li>
+					<li class="header__item"><a class="header__link link" href="">Pricing</a></li>
+					<li class="header__item"><a class="header__link link" href="">Community</a></li>
+					<li class="header__item"><a class="header__link link" href="">Support</a></li>
 				</ul>
 				<ul class="header__auth list">
-					<li><a class="button secondary" href="">Log in</a></li>
-					<li><a class="button primary" href="">Register</a></li>
+					<li class="header__button"><button class="button primary" type="button">Log in</button></li>
+					<li class="header__button"><button class="button secondary" type="button">Register</button></li>
 				</ul>
 			</nav>
 		</header>
@@ -34,65 +40,65 @@
 		<main>
 			<!-- Hero -->
 			<section class="hero">
-				<h1 class="hero__title">The largest community of photo enthusiasts</h1>
-				<button type="button" class="button primary">Join Today</button>
+				<h1 class="hero__title title">The largest community of photo enthusiasts</h1>
+				<button type="button" class="button secondary hero">Join Today</button>
 			</section>
 
 			<!-- Advantages -->
-			<section class="section">
-				<h2 class="section__title">Snap photos and share like <br />never before</h2>
+			<section class="advantages">
+				<h2 class="advantages__title title">Snap photos and share like <br />never before</h2>
 				<ul class="advantages___list list">
-					<li>
-						<h3 class="title">Sed ut perspiciatis</h3>
-						<p>
+					<li class="advantages___item">
+						<h3 class="advantages__subtitle subtitle">Sed ut perspiciatis</h3>
+						<p class="advantages__text text">
 							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
 							dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
 						</p>
-						<a class="button secondary" href="">Learn more</a>
+						<button class="button primary" type="button">Learn more</button>
 					</li>
-					<li>
-						<h3 class="title">Lorem ipsum dolor</h3>
-						<p>
+					<li class="advantages___item">
+						<h3 class="advantages__subtitle subtitle">Lorem ipsum dolor</h3>
+						<p class="advantages__text text">
 							Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 							enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 						</p>
-						<a class="button secondary" href="">Learn more</a>
+						<button class="button primary" type="button">Learn more</button>
 					</li>
-					<li>
-						<h3 class="title">Nemo enim ipsam</h3>
-						<p>
+					<li class="advantages___item">
+						<h3 class="advantages__subtitle subtitle">Nemo enim ipsam</h3>
+						<p class="advantages__text text">
 							Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
 							dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
 						</p>
-						<a class="button secondary" href="">Learn more</a>
+						<button class="button primary" type="button">Learn more</button>
 					</li>
-					<li>
-						<h3 class="title">Tempor incididunt</h3>
-						<p>
+					<li class="advantages___item">
+						<h3 class="advantages__subtitle subtitle">Tempor incididunt</h3>
+						<p class="advantages__text text">
 							Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
 							amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
 						</p>
-						<a class="button secondary" href="">Learn more</a>
+						<button class="button primary" type="button">Learn more</button>
 					</li>
 				</ul>
 			</section>
 
-			<!-- Examples of work -->
-			<section class="section">
-				<h2 class="section__title">Examples of work</h2>
+			<!-- Examples -->
+			<section class="examples">
+				<h2 class="examples__title title visually-hidden">Examples of work</h2>
 				<ul class="examples__list list">
-					<li>
+					<li class="examples__item">
 						<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
-						<h3 class="title">Sed ut perspiciatis unde omnis</h3>
-						<p>
+						<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
+						<p class="examples__text text">
 							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
 							dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
 						</p>
 					</li>
-					<li>
-						<h3 class="title">Sed ut perspiciatis unde omnis</h3>
-						<p
-							>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+					<li class="examples__item">
+						<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
+						<p class="examples__text text">
+							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
 							dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
 						</p>
 						<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
@@ -101,47 +107,49 @@
 			</section>
 
 			<!-- Testimonial -->
-			<section class="section">
-				<h2 class="section__title">You’re in good company</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+			<section class="testimonial">
+				<h2 class="testimonial__title title">You’re in good company</h2>
+				<p class="testimonial__description description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+				</p>
 				<ul class="testimonial__list list">
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
-					<li>
-						<a href="">
+					<li class="testimonial__item">
+						<a class="testimonial__link" href="">
 							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
 						</a>
 					</li>
@@ -149,70 +157,72 @@
 			</section>
 
 			<!-- Signup -->
-			<section class="section">
-				<h2 class="section__title">Signup</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+			<section class="signup">
+				<h2 class="signup__title title visually-hidden">Signup</h2>
+				<p class="signup__description description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p
+				>
 				<ul class="signup__list list">
-					<li>
-						<a href="">Join Today</a>
+					<li class="signup__item">
+						<button type="button" class="button secondary hero">Join Today</button>
 					</li>
-					<li>
-						<a href="">Contact us</a>
+					<li class="signup__item">
+						<button type="button" class="button primary hero">Contact us</button>
 					</li>
 				</ul>
 			</section>
 		</main>
 
 		<!-- Footer -->
-		<footer>
+		<footer class="footer">
 			<!--logo-->
-			<a href="./index.html">
+			<a class="footer__logo logo link" href="./index.html">
 				<img src="./images/logo_1-2.svg" alt="part of the logo_1" />
 				<img src="./images/logo_2-2.svg" alt="part of the logo_2" />
 				photo
 			</a>
 
 			<ul class="footer__menu list">
-				<li>
-					<h3 class="title">Mobile app</h3>
+				<li class="menu__item">
+					<h3 class="menu__subtitle subtitle">Mobile app</h3>
 					<ul class="footer__submenu list">
-						<li><a class="link" href="">Features</a></li>
-						<li><a class="link" href="">Live share</a></li>
-						<li><a class="link" href="">Video record</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">Features</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">Live share</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">Video record</a></li>
 					</ul>
 				</li>
-				<li>
-					<h3 class="title">Community</h3>
+				<li class="menu__item">
+					<h3 class="menu__subtitle subtitle">Community</h3>
 					<ul class="footer__submenu list">
-						<li><a class="link" href="">Featured artists</a></li>
-						<li><a class="link" href="">The Portal</a></li>
-						<li><a class="link" href="">Live events</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">Featured artists</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">The Portal</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">Live events</a></li>
 					</ul>
 				</li>
-				<li>
-					<h3 class="title">Company</h3>
+				<li class="menu__item">
+					<h3 class="menu__subtitle subtitle">Company</h3>
 					<ul class="footer__submenu list">
-						<li><a class="link" href="">About us</a></li>
-						<li><a class="link" href="">Contact us</a></li>
-						<li><a class="link" href="">History</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">About us</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">Contact us</a></li>
+						<li class="submenu__item"><a class="submenu__link link" href="">History</a></li>
 					</ul>
 				</li>
 			</ul>
 
 			<ul class="footer__actions list">
-				<li><button type="button" class="button primary">Register</button></li>
-				<li><button type="button" class="button secondary">Log in</button></li>
+				<li class="actions__item"><button type="button" class="button secondary">Register</button></li>
+				<li class="actions__item"><button type="button" class="button primary">Log in</button></li>
 			</ul>
 
 			<!-- Copyright -->
-			<p class="footer__copyright">&copy; Photo, Inc. 2023. We love our users!</p>
+			<p class="footer__copyright">&#169; Photo, Inc. 2023. We love our users!</p>
 
-			<p class="footer__social-title">Follow us:</p>
-			<ul class="footer__social-list list">
-				<li><a href="" aria-label="Facebook link" class="footer__social-link"></a></li>
-				<li><a href="" aria-label="Twitter link" class="footer__social-link"></a></li>
-				<li><a href="" aria-label="Instagram link" class="footer__social-link"></a></li>
-				<li><a href="" aria-label="LinkedIn link" class="footer__social-link"></a></li>
+			<p class="footer__text">Follow us:</p>
+			<ul class="footer__socials list">
+				<li class="socials__item"><a class="socials__link link" href="" aria-label="Facebook link"></a></li>
+				<li class="socials__item"><a class="socials__link link" href="" aria-label="Twitter link"></a></li>
+				<li class="socials__item"><a class="socials__link link" href="" aria-label="Instagram link"></a></li>
+				<li class="socials__item"><a class="socials__link link" href="" aria-label="LinkedIn link"></a></li>
 			</ul>
 		</footer>
 	</body>
