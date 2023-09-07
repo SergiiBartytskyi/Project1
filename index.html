@@ -10,12 +10,19 @@
 			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+			integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
 		<!-- Шапка -->
 		<header class="header">
-			<nav class="header__nav">
+			<nav class="container header__nav">
 				<!--logo-->
 				<a class="header__logo logo link" href="./index.html">
 					<img src="./images/logo_1-2.svg" alt="part of the logo_1" />
@@ -35,7 +42,6 @@
 				</ul>
 			</nav>
 		</header>
-
 		<!-- Main -->
 		<main>
 			<!-- Hero -->
@@ -45,131 +51,139 @@
 			</section>
 
 			<!-- Advantages -->
-			<section class="advantages">
-				<h2 class="advantages__title title">Snap photos and share like <br />never before</h2>
-				<ul class="advantages___list list">
-					<li class="advantages___item">
-						<h3 class="advantages__subtitle subtitle">Sed ut perspiciatis</h3>
-						<p class="advantages__text text">
-							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-							dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
-						</p>
-						<button class="button primary" type="button">Learn more</button>
-					</li>
-					<li class="advantages___item">
-						<h3 class="advantages__subtitle subtitle">Lorem ipsum dolor</h3>
-						<p class="advantages__text text">
-							Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-						</p>
-						<button class="button primary" type="button">Learn more</button>
-					</li>
-					<li class="advantages___item">
-						<h3 class="advantages__subtitle subtitle">Nemo enim ipsam</h3>
-						<p class="advantages__text text">
-							Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-							dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
-						</p>
-						<button class="button primary" type="button">Learn more</button>
-					</li>
-					<li class="advantages___item">
-						<h3 class="advantages__subtitle subtitle">Tempor incididunt</h3>
-						<p class="advantages__text text">
-							Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-							amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
-						</p>
-						<button class="button primary" type="button">Learn more</button>
-					</li>
-				</ul>
+			<section class="advantages section">
+				<div class="container">
+					<h2 class="advantages__title title">Snap photos and share like <br />never before</h2>
+					<ul class="advantages___list list">
+						<li class="advantages___item">
+							<h3 class="advantages__subtitle subtitle">Sed ut perspiciatis</h3>
+							<p class="advantages__text text">
+								Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+								dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
+							</p>
+							<button class="button primary" type="button">Learn more</button>
+						</li>
+						<li class="advantages___item">
+							<h3 class="advantages__subtitle subtitle">Lorem ipsum dolor</h3>
+							<p class="advantages__text text">
+								Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+							</p>
+							<button class="button primary" type="button">Learn more</button>
+						</li>
+						<li class="advantages___item">
+							<h3 class="advantages__subtitle subtitle">Nemo enim ipsam</h3>
+							<p class="advantages__text text">
+								Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+								dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
+							</p>
+							<button class="button primary" type="button">Learn more</button>
+						</li>
+						<li class="advantages___item">
+							<h3 class="advantages__subtitle subtitle">Tempor incididunt</h3>
+							<p class="advantages__text text">
+								Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+								amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+							</p>
+							<button class="button primary" type="button">Learn more</button>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<!-- Examples -->
-			<section class="examples">
-				<h2 class="examples__title title visually-hidden">Examples of work</h2>
-				<ul class="examples__list list">
-					<li class="examples__item">
-						<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
-						<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
-						<p class="examples__text text">
-							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-							dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-						</p>
-					</li>
-					<li class="examples__item">
-						<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
-						<p class="examples__text text">
-							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-							dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-						</p>
-						<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
-					</li>
-				</ul>
+			<section class="examples section">
+				<div class="container">
+					<h2 class="examples__title title visually-hidden">Examples of work</h2>
+					<ul class="examples__list list">
+						<li class="examples__item">
+							<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
+							<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
+							<p class="examples__text text">
+								Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+								dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+							</p>
+						</li>
+						<li class="examples__item">
+							<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
+							<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
+							<p class="examples__text text">
+								Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+								dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+							</p>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<!-- Testimonial -->
-			<section class="testimonial">
-				<h2 class="testimonial__title title">You’re in good company</h2>
-				<p class="testimonial__description description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-				</p>
-				<ul class="testimonial__list list">
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-					<li class="testimonial__item">
-						<a class="testimonial__link" href="">
-							<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
-						</a>
-					</li>
-				</ul>
+			<section class="testimonial section">
+				<div class="container">
+					<h2 class="testimonial__title title">You’re in good company</h2>
+					<p class="testimonial__description description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					</p>
+					<ul class="testimonial__list list">
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+						<li class="testimonial__item">
+							<a class="testimonial__link" href="">
+								<img src="./images/placeholder_testimonial.png" alt="partner company logo" width="173" />
+							</a>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<!-- Signup -->
-			<section class="signup">
-				<h2 class="signup__title title visually-hidden">Signup</h2>
-				<p class="signup__description description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p
-				>
-				<ul class="signup__list list">
-					<li class="signup__item">
-						<button type="button" class="button secondary hero">Join Today</button>
-					</li>
-					<li class="signup__item">
-						<button type="button" class="button primary hero">Contact us</button>
-					</li>
-				</ul>
+			<section class="signup section">
+				<div class="container">
+					<h2 class="signup__title title visually-hidden">Signup</h2>
+					<p class="signup__description description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p
+					>
+					<ul class="signup__list list">
+						<li class="signup__item">
+							<button type="button" class="button secondary hero">Join Today</button>
+						</li>
+						<li class="signup__item">
+							<button type="button" class="button primary hero">Contact us</button>
+						</li>
+					</ul>
+				</div>
 			</section>
 		</main>
 
