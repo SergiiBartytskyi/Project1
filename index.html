@@ -45,9 +45,9 @@
 		<!-- Main -->
 		<main>
 			<!-- Hero -->
-			<section class="hero">
+			<section class="hero__section">
 				<h1 class="hero__title title">The largest community of photo enthusiasts</h1>
-				<button type="button" class="button secondary hero">Join Today</button>
+				<button type="button" class="button secondary bigger">Join Today</button>
 			</section>
 
 			<!-- Advantages -->
@@ -98,19 +98,23 @@
 					<ul class="examples__list list">
 						<li class="examples__item">
 							<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
-							<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
-							<p class="examples__text text">
-								Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-								dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-							</p>
+							<div class="exemples__wrap">
+								<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
+								<p class="examples__text text">
+									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+									magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+								</p>
+							</div>
 						</li>
 						<li class="examples__item">
 							<img src="./images/placeholder.png" alt="Exemple of work" width="750" />
-							<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
-							<p class="examples__text text">
-								Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-								dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-							</p>
+							<div class="exemples__wrap">
+								<h3 class="examples__subtitle subtitle">Sed ut perspiciatis unde omnis</h3>
+								<p class="examples__text text">
+									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+									magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+								</p>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -170,17 +174,17 @@
 
 			<!-- Signup -->
 			<section class="signup section">
-				<div class="container">
+				<div class="signup__container container">
 					<h2 class="signup__title title visually-hidden">Signup</h2>
 					<p class="signup__description description">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p
 					>
 					<ul class="signup__list list">
 						<li class="signup__item">
-							<button type="button" class="button secondary hero">Join Today</button>
+							<button type="button" class="button secondary bigger">Join Today</button>
 						</li>
 						<li class="signup__item">
-							<button type="button" class="button primary hero">Contact us</button>
+							<button type="button" class="button primary bigger">Contact us</button>
 						</li>
 					</ul>
 				</div>
@@ -189,55 +193,61 @@
 
 		<!-- Footer -->
 		<footer class="footer">
-			<!--logo-->
-			<a class="footer__logo logo link" href="./index.html">
-				<img src="./images/logo_1-2.svg" alt="part of the logo_1" />
-				<img src="./images/logo_2-2.svg" alt="part of the logo_2" />
-				photo
-			</a>
+			<div class="container">
+				<div class="footer__wrap">
+					<!--logo-->
+					<a class="footer__logo logo link" href="./index.html">
+						<img src="./images/logo_1-2.svg" alt="part of the logo_1" />
+						<img src="./images/logo_2-2.svg" alt="part of the logo_2" />
+						photo
+					</a>
 
-			<ul class="footer__menu list">
-				<li class="menu__item">
-					<h3 class="menu__subtitle subtitle">Mobile app</h3>
-					<ul class="footer__submenu list">
-						<li class="submenu__item"><a class="submenu__link link" href="">Features</a></li>
-						<li class="submenu__item"><a class="submenu__link link" href="">Live share</a></li>
-						<li class="submenu__item"><a class="submenu__link link" href="">Video record</a></li>
+					<ul class="footer__menu list">
+						<li class="menu__item">
+							<h3 class="menu__subtitle subtitle">Mobile app</h3>
+							<ul class="footer__submenu list">
+								<li class="submenu__item"><a class="submenu__link link" href="">Features</a></li>
+								<li class="submenu__item"><a class="submenu__link link" href="">Live share</a></li>
+								<li class="submenu__item"><a class="submenu__link link" href="">Video record</a></li>
+							</ul>
+						</li>
+						<li class="menu__item">
+							<h3 class="menu__subtitle subtitle">Community</h3>
+							<ul class="footer__submenu list">
+								<li class="submenu__item"><a class="submenu__link link" href="">Featured artists</a></li>
+								<li class="submenu__item"><a class="submenu__link link" href="">The Portal</a></li>
+								<li class="submenu__item"><a class="submenu__link link" href="">Live events</a></li>
+							</ul>
+						</li>
+						<li class="menu__item">
+							<h3 class="menu__subtitle subtitle">Company</h3>
+							<ul class="footer__submenu list">
+								<li class="submenu__item"><a class="submenu__link link" href="">About us</a></li>
+								<li class="submenu__item"><a class="submenu__link link" href="">Contact us</a></li>
+								<li class="submenu__item"><a class="submenu__link link" href="">History</a></li>
+							</ul>
+						</li>
 					</ul>
-				</li>
-				<li class="menu__item">
-					<h3 class="menu__subtitle subtitle">Community</h3>
-					<ul class="footer__submenu list">
-						<li class="submenu__item"><a class="submenu__link link" href="">Featured artists</a></li>
-						<li class="submenu__item"><a class="submenu__link link" href="">The Portal</a></li>
-						<li class="submenu__item"><a class="submenu__link link" href="">Live events</a></li>
+
+					<ul class="footer__actions list">
+						<li class="actions__item"><button type="button" class="button secondary">Register</button></li>
+						<li class="actions__item"><button type="button" class="button primary">Log in</button></li>
 					</ul>
-				</li>
-				<li class="menu__item">
-					<h3 class="menu__subtitle subtitle">Company</h3>
-					<ul class="footer__submenu list">
-						<li class="submenu__item"><a class="submenu__link link" href="">About us</a></li>
-						<li class="submenu__item"><a class="submenu__link link" href="">Contact us</a></li>
-						<li class="submenu__item"><a class="submenu__link link" href="">History</a></li>
+				</div>
+
+				<div class="footer__copy">
+					<!-- Copyright -->
+					<p class="footer__copyright">&#169; Photo, Inc. 2023. We love our users!</p>
+
+					<p class="footer__text">Follow us:</p>
+					<ul class="footer__socials list">
+						<li class="socials__item"><a class="socials__link link" href="" aria-label="Facebook link"></a></li>
+						<li class="socials__item"><a class="socials__link link" href="" aria-label="Twitter link"></a></li>
+						<li class="socials__item"><a class="socials__link link" href="" aria-label="Instagram link"></a></li>
+						<li class="socials__item"><a class="socials__link link" href="" aria-label="LinkedIn link"></a></li>
 					</ul>
-				</li>
-			</ul>
-
-			<ul class="footer__actions list">
-				<li class="actions__item"><button type="button" class="button secondary">Register</button></li>
-				<li class="actions__item"><button type="button" class="button primary">Log in</button></li>
-			</ul>
-
-			<!-- Copyright -->
-			<p class="footer__copyright">&#169; Photo, Inc. 2023. We love our users!</p>
-
-			<p class="footer__text">Follow us:</p>
-			<ul class="footer__socials list">
-				<li class="socials__item"><a class="socials__link link" href="" aria-label="Facebook link"></a></li>
-				<li class="socials__item"><a class="socials__link link" href="" aria-label="Twitter link"></a></li>
-				<li class="socials__item"><a class="socials__link link" href="" aria-label="Instagram link"></a></li>
-				<li class="socials__item"><a class="socials__link link" href="" aria-label="LinkedIn link"></a></li>
-			</ul>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
