@@ -6,6 +6,13 @@
 	--secondary-bg-color: #f5f5f5;
 }
 
+.btn {
+	width: 100px;
+	height: 20px;
+	border: 1px solid red;
+	font-size: 14px;
+}
+
 body {
 	letter-spacing: -0.015em;
 	font-family: "Montserrat", sans-serif;
@@ -17,12 +24,14 @@ body {
 	padding-top: 120px;
 	padding-bottom: 120px;
 }
+
 .container {
 	margin-left: auto;
 	margin-right: auto;
 	width: 1440px;
 	outline: 2px solid tomato;
 }
+
 .logo {
 	font-size: 28px;
 	line-height: 1.1;
@@ -110,6 +119,7 @@ p {
 	padding: 15px 45px;
 	font-size: 17px;
 }
+
 .button.primary {
 	color: var(--accent-color);
 	background-color: var(--primary-bg-color);
@@ -124,24 +134,23 @@ p {
 
 /* Header */
 
-.header {
-}
+.header {}
 
 .header__nav {
 	display: flex;
 	align-items: center;
 }
 
-.header__logo {
-}
+.header__logo {}
 
 .header__menu {
 	display: flex;
 	gap: 40px;
 	margin-left: 70px;
 }
-.header__item {
-}
+
+.header__item {}
+
 .header__link {
 	display: block;
 	padding-top: 21px;
@@ -174,6 +183,7 @@ p {
 .hero__section {
 	text-align: center;
 }
+
 .hero__title {
 	margin-bottom: 40px;
 	font-size: 56px;
@@ -183,8 +193,7 @@ p {
 
 /* Adventage */
 
-.advantages__title {
-}
+.advantages__title {}
 
 .advantages___list {
 	display: flex;
@@ -221,11 +230,10 @@ p {
 	padding-top: 0;
 	padding-bottom: 0;
 }
-.examples__title {
-}
 
-.examples__list {
-}
+.examples__title {}
+
+.examples__list {}
 
 .examples__item {
 	display: flex;
@@ -239,13 +247,14 @@ p {
 	background-color: var(--secondary-bg-color);
 }
 
-.examples__item:nth-child(2n + 1) > .exemples__wrap {
+.examples__item:nth-child(2n + 1)>.exemples__wrap {
 	margin-left: 84px;
 }
 
-.examples__item:nth-child(2n) > .exemples__wrap {
+.examples__item:nth-child(2n)>.exemples__wrap {
 	margin-right: 84px;
 }
+
 .exemples__wrap {
 	display: block;
 }
@@ -254,8 +263,7 @@ p {
 	margin-bottom: 24px;
 }
 
-.examples__text {
-}
+.examples__text {}
 
 /* Testimonial */
 
@@ -278,8 +286,7 @@ p {
 	margin-right: auto;
 }
 
-.testimonial__item {
-}
+.testimonial__item {}
 
 .testimonial__link {
 	display: block;
@@ -291,11 +298,10 @@ p {
 	display: flex;
 	align-items: center;
 }
-.signup__title {
-}
 
-.signup__text {
-}
+.signup__title {}
+
+.signup__text {}
 
 .signup__list {
 	display: flex;
@@ -303,8 +309,7 @@ p {
 	margin-left: 84px;
 }
 
-.signup__item {
-}
+.signup__item {}
 
 /* Footer */
 
@@ -312,6 +317,7 @@ p {
 	display: flex;
 	/* align-items: center; */
 }
+
 .footer__logo {
 	margin-right: auto;
 }
@@ -324,7 +330,7 @@ p {
 	width: 173px;
 }
 
-.menu__item + .menu__item {
+.menu__item+.menu__item {
 	margin-left: 20px;
 }
 
@@ -334,8 +340,7 @@ p {
 	line-height: 1.6;
 }
 
-.footer__submenu {
-}
+.footer__submenu {}
 
 .submenu__item {
 	margin-bottom: 8px;
@@ -351,7 +356,7 @@ p {
 	margin-left: 60px;
 }
 
-.actions__item + .actions__item {
+.actions__item+.actions__item {
 	margin-top: 16px;
 }
 
@@ -371,17 +376,85 @@ p {
 	line-height: 1.6;
 }
 
-.footer__socials {
-}
+.footer__socials {}
 
-.socials__item + .socials__item {
+.socials__item+.socials__item {
 	margin-left: 20px;
 }
 
-.socials__link {
-}
+.socials__link {}
 
 .submenu__link:hover,
 .submenu__link:focus {
 	color: var(--accent-color);
 }
+
+/* Mouse events */
+/* .box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 300px;
+	background-color: #3f51b5;
+	transition: background-color 200ms easy-in
+}
+
+.box--active {
+	background-color: #009688;
+}
+
+.inner-box {
+	width: 100px;
+	height: 100px;
+	background-color: #ffc107;
+} */
+
+/* Modal */
+/* body.show-modal .backdrop {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: initial;
+}
+
+body.show-modal .modal {
+	transform: scale(1);
+}
+
+.backdrop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 999;
+
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 200ms easy-in-out, visability 200ms easy-in-out;
+
+}
+
+.modal {
+	padding: 24px;
+	border-radius: 4px;
+	max-width: 640px;
+	width: 100%;
+	min-height: 320px;
+	background-color: #fff;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+	transform: scale(1.1);
+	transition: transform 200ms easy-in-out;
+
+} */
+
+/* Task 1 - Cars/ */
+/* .img {
+	width: 300px;
+} */
