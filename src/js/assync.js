@@ -1,5 +1,5 @@
-import BSN from "../node_modules/boo";
-console.log(BSN);
+console.log(333);
+
 // console.log("First log");
 // console.log("Second log");
 // console.log("Third log");
