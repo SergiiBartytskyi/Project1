@@ -1317,39 +1317,458 @@
 //
 // 							Task 1
 //
+// const cars = [
+// 	{
+// 		model: "Honda",
+// 		type: "Civic",
+// 		price: 12000,
+// 		img: "https://motormag.pl/wp-content/uploads/2022/03/honda-civic-type-r-2020.jpg.webp",
+// 	},
+// 	{
+// 		model: "Audi",
+// 		type: "Q7",
+// 		price: 40000,
+// 		img: "https://media.ed.edmunds-media.com/audi/q7/2022/oem/2022_audi_q7_4dr-suv_prestige_fq_oem_1_1280.jpg",
+// 	},
+// 	{
+// 		model: "BMW",
+// 		type: "5 series",
+// 		price: 50000,
+// 		img: "https://upload.wikimedia.org/wikipedia/commons/5/52/BMW_G30_FL_IMG_5351.jpg",
+// 	},
+// 	{
+// 		model: "Honda",
+// 		type: "Accord",
+// 		price: 20000,
+// 		img: "https://hips.hearstapps.com/hmg-prod/images/dsc01432-1677186780.jpg?crop=0.534xw:0.601xh;0.197xw,0.318xh&resize=768:*",
+// 	},
+// 	{
+// 		model: "Mercedes",
+// 		type: "S class",
+// 		price: 70000,
+// 		img: "https://www.topgear.com/sites/default/files/2022/03/1-Mercedes-S-Class-plug-in.jpg",
+// 	},
+// 	{
+// 		id: 4,
+// 		model: "Toyota",
+// 		type: "Camry",
+// 		price: 45000,
+// 		img: "https://scene7.toyota.eu/is/image/toyotaeurope/CAM0001a_21-2:Medium-Landscape?ts=0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+// 	},
+// ];
+
+// const container = document.querySelector(".js-container");
+// console.dir(container);
+
+// const markup = cars
+// 	.map(
+// 		({ id = "none", model, type, price, img }) =>
+// 			`<li data-id="${id}">
+// 	<img src="${img}" alt="${model}" class="img">
+// 	<h2>Brand - ${model}</h2>
+// 	<h3>Model - ${type}</h3>
+// 	<p>Price - ${price}</p>
+// </li>`,
+// 	)
+// 	.join("");
+
+// container.insertAdjacentHTML("beforeend", markup);
+// console.dir(markup);
+//
+//
+
+//
+//
+// 					Task 2. Technologies.
+// 					--------------------
+//
+// Ств.список технологій що вивчаються на курсі Fullstack за допомогою js, використ.
+// два способи(map i reduce);
+//
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+
+// const body = document.body;
+// const technologiesList = document.querySelector(".technologies");
+
+// 1 спосіб -- append
+//
+// const makeListElements = arr => {
+// 	return arr.map(el => {
+// 		const liEl = document.createElement("li");
+// 		liEl.textContent = el;
+// 		return liEl;
+// 	});
+// };
+// const elements = makeListElements(technologies);
+// technologiesList.append(...elements);
+
+// 2 спосіб -- insertAdjacentHTML
+//
+// const makeListElements = arr => {
+// 	return arr.map(el => `<li>${el}</li>`).join("");
+// };
+// const markup = makeListElements(technologies);
+// technologiesList.insertAdjacentHTML("beforeend", markup);
+
+// 3 спосіб -- innerHTML
+//
+// const makeListElements = arr => {
+// 	return arr.map(el => `<li>${el}</li>`).join("");
+// };
+// const markup = makeListElements(technologies);
+
+// technologiesList.innerHTML = markup;
+//
+
+// 4 спосіб -- reduce
+//
+//// const res = technologies.reduce((previous, current) => previous + `<li>${current}</li>`, "");
+// technologiesList.insertAdjacentHTML("beforeend", res);
+//
+//
+
+//
+//
+// 								Task 3. Buttons
+// 								--------------
+//
+// Ств. декілька кнопок на основі масива з об., викор. createElement.
+//
+// const colors = [
+// 	{ label: "red", color: "#FF0000" },
+// 	{ label: "green", color: "#00FF00" },
+// 	{ label: "blue", color: "#0000FF" },
+// 	{ label: "yellow", color: "#FFFF00" },
+// ];
+
+// const makeBtnsEl = arr => {
+// 	return arr.map(({ label, color }) => {
+// 		const btnEl = document.createElement("button");
+// 		btnEl.textContent = label;
+// 		btnEl.style.backgroundColor = color;
+// 		btnEl.classList.add("btn");
+// 		return btnEl;
+// 	});
+// };
+
+// const btns = makeBtnsEl(colors);
+// body.append(...btns);
+//
+//
+
+//
+//
+// 								Task 4. Site
+// 								--------------
+//
+// Створити сайт з розміткою записаною у файлі 'example.html',
+// використовуючи лише JS в HTML файлі має бути лише тег body
+//
+// const bodyEl = document.querySelector(".body");
+
+// const makeCreateElement = (tagName, config) => {
+// 	const newElement = document.createElement(tagName);
+
+// 	if (config) {
+// 		Object.entries(config).forEach(([key, value]) => {
+// 			newElement[key] = value;
+// 		});
+// 	}
+
+// 	return newElement;
+// };
+// {
+// 	/* <main> */
+// }
+// // const main = document.createElement("main");
+// // main.id = "main";
+// const main = makeCreateElement("main", { id: "main" });
+
+// // </main>
+
+// {
+// 	/* <h1> */
+// }
+// // const titleEl = document.createElement("h1");
+// // titleEl.classList.add("title");
+// // titleEl.textContent = "- Michel Legrand -";
+
+// const titleEl = makeCreateElement("h1", { id: "title", textContent: "- Michel Legrand -" });
+// main.append(titleEl);
+// // </h1>
+
+// {
+// 	/* <figure>	 */
+// }
+// // const figureEl = document.createElement("figure");
+// // figureEl.id = "img-div";
+// const figureEl = makeCreateElement("figure", { id: "img-div" });
+
+// // const imgEl = document.createElement("img");
+// // imgEl.src =
+// // 	"https://soundtrackfest.com/wp-content/uploads/2018/09/MN-2018-09-05-Michel-Legrand-en-concierto-con-la-Royal-Philharmonic-Orchestra.jpg";
+// // imgEl.alt = "Michel Legrand conducting his orchestra.";
+// // imgEl.id = "image";
+// const imgEl = makeCreateElement("img", {
+// 	id: "image",
+// 	src: "https://soundtrackfest.com/wp-content/uploads/2018/09/MN-2018-09-05-Michel-Legrand-en-concierto-con-la-Royal-Philharmonic-Orchestra.jpg",
+// 	alt: "Michel Legrand conducting his orchestra.",
+// });
+
+// // const figcaptionEl = document.createElement("figcaption");
+// // figcaptionEl.id = "img-caption";
+// // figcaptionEl.textContent = "Michel Legrand conducting his orchestra.";
+// const figcaptionEl = makeCreateElement("figcaption", {
+// 	id: "img-caption",
+// 	textContent: "Michel Legrand conducting his orchestra.",
+// });
+
+// figureEl.append(imgEl, figcaptionEl);
+// main.append(figureEl);
+// // </figure>
+
+// {
+// 	/* <article> */
+// }
+// // const articleRef = document.createElement("article");
+// // articleRef.id = "tribute-info";
+// const articleRef = makeCreateElement("article", { id: "tribute-info" });
+
+// // const introEl = document.createElement("div");
+// // introEl.id = "intro";
+// const introEl = makeCreateElement("div", { id: "intro" });
+// const paragraphIntroEl = makeCreateElement("p", {
+// 	innerHTML: "&bull; Michel Legrand (1932-2019) was a famous French misician. &bull;",
+// });
+// introEl.append(paragraphIntroEl);
+
+// const paragraphAfterIntroEl = makeCreateElement("p");
+// const uInParagraphEl = makeCreateElement("u", { textContent: "Here are some major facts about him:" });
+// paragraphAfterIntroEl.append(uInParagraphEl);
+
+// const listEl = makeCreateElement("ul");
+// const listItems = [
+// 	// "He was born in Paris, France on February 24th, 1932.",
+// 	"1966: Parasolki z Cherbourga, nominacja do Oscara za najlepszą muzykę",
+// 	"1969: Panienki z Rochefort, nominacja do Oscara za najlepszą muzykę",
+// 	"1969: Sprawa Thomasa Crowna, Oscar za najlepszą piosenkę",
+// 	"1969: Sprawa Thomasa Crowna, Złoty Glob za najlepszą piosenkę",
+// 	"1970: Sprawa Thomasa Crowna, nominacja do BAFTA za najlepszą muzykę",
+// 	"1971: Wichrowe wzgórza, nominacja do Złotego Globu za najlepszą muzykę",
+// 	"1972: Le Mans, nominacja do Złotego Globu za najlepszą muzykę",
+// 	// "He was interred at the P&agrave;re Lachaise Cemetery in Paris, France.",
+// ];
+// listItems.forEach(item => {
+// 	const listItemEl = makeCreateElement("li", { textContent: item });
+// 	listEl.appendChild(listItemEl);
+// });
+
+// const liFirstChild = makeCreateElement("li", {
+// 	innerHTML: "He was born in Paris, France on February 24<sup>th</sup>, 1932.",
+// });
+// listEl.prepend(liFirstChild);
+
+// const liLastChild = makeCreateElement("li", {
+// 	innerHTML: "He was interred at the P&agrave;re Lachaise Cemetery in Paris, France.",
+// });
+// listEl.appendChild(liLastChild);
+
+// const blockquoteEl = makeCreateElement("blockquote", { id: "quote" });
+// const paragraphInBlockquoteEl = makeCreateElement("p", {
+// 	textContent: "Writing is a mental thing, while playing is wssentially a physical feeling.",
+// });
+// const citeEl = makeCreateElement("cite", { textContent: "-- Michel Legrand" });
+// blockquoteEl.append(paragraphInBlockquoteEl, citeEl);
+
+// const hrEl = makeCreateElement("hr");
+
+// const paragraphAfterBlockquoteEl = makeCreateElement("p", {
+// 	textContent: "To find out more abour him, feel free to have a look at his biography on ",
+// });
+// const linkInParagraphAfterBlockquoteEl = makeCreateElement("a", {
+// 	id: "link",
+// 	href: "https://en.wikipedia.org/wiki/Michel_Legrand",
+// 	target: "_blank",
+// 	textContent: "wikipedia",
+// });
+// paragraphAfterBlockquoteEl.append(linkInParagraphAfterBlockquoteEl);
+
+// articleRef.append(introEl, paragraphAfterIntroEl, listEl, blockquoteEl, hrEl, paragraphAfterBlockquoteEl);
+// main.append(articleRef);
+// // </article>
+// bodyEl.append(main);
+
+const bodyEl = document.querySelector(".body");
+// const onClick = event => console.log(event.currentTarget);
+// const onClick = event => console.log(event.target);
+// const btn = `<button type="button" class="js-btn"></button>`;
+
+// bodyEl.insertAdjacentHTML("beforeend", btn);
+// // console.log(bodyEl);
+// const btnsEl = document.querySelectorAll(".js-btn");
+// // console.log(btnsEl);
+// const onBtn = bodyEl.firstElementChild;
+// onBtn.textContent = "On";
+// const offBtn = bodyEl.lastElementChild;
+// offBtn.textContent = "Off";
+// // console.log(onBtn);
+// // console.log(offBtn);
+
+// btnsEl.forEach(btnEl => btnEl.addEventListener("click", onClick));
+// btnsEl.addEventListener("click", onClick);
+
+// const btnEl = document.querySelector(".js-btn");
+// btnEl.textContent = "Click Me";
+// // btnEl.addEventListener("click", makeMoveContainer);
+// // function makeMoveContainer() {
+// // 	console.log("Click on button!");
+// // 	const moveEl = document.querySelector(".container");
+// // 	moveEl.classList.toggle("js-container");
+// // }
+// const container = document.querySelector(".js-container");
+// btnEl.addEventListener("click", onClick);
+// let step = 0;
+
+// function onClick(evt) {
+// 	step += 5;
+// 	container.style.marginLeft = `${step}px`;
+// 	container.style.marginTop = `${step}px`;
+// 	console.log(evt.currentTarget);
+// }
+
+// const title = document.querySelector(".js-title");
+// const title2 = document.querySelector(".js-title2");
+// const str = title.textContent.slice(0, 13);
+// console.log(str);
+// const reminder = title.textContent.slice(13);
+// console.log(reminder);
+
+// function onClick(e) {
+// 	const title = e.currentTarget;
+// 	const str = title.textContent.slice(0, 13);
+// 	const reminder = title.textContent.slice(13);
+// 	console.log(reminder);
+// }
+
+// const maxLegth = 13;
+// const totalLength = maxLegth + 3;
+
+// function onClick(e) {
+// 	const title = e.currentTarget;
+// 	const str = title.textContent.slice(0, maxLegth);
+// 	if (title.textContent.length > totalLength) {
+// 		const remainder = title.textContent.slice(maxLegth);
+// 		title.setAttribute("data-title", remainder);
+// 		title.textContent = str + "...";
+// 	} else {
+// 		const remainder = title.dataset.title;
+// 		if (remainder) {
+// 			title.textContent = str + remainder;
+// 		}
+// 		// console.log(remainder);
+// 	}
+// 	// console.log(reminder);
+// }
+
+// // title.addEventListener("click", onClick);
+// // title2.addEventListener("click", onClick);
+// const title1 = document.querySelector(".js-title1");
+// const title2 = document.querySelector(".js-title2");
+// const title3 = document.querySelector(".js-title3");
+// title1.addEventListener("click", onClick);
+// title2.addEventListener("click", onClick);
+// title3.addEventListener("click", onClick);
+
+// const inputEl = document.querySelector(".js-input");
+// inputEl.addEventListener("change", onInput);
+// function onInput(e) {
+// 	console.dir(e.currentTarget.value);
+// }
+
+// const formEl = document.querySelector(".js-form");
+// formEl.addEventListener("submit", onSubmit);
+// function onSubmit(e) {
+// 	e.preventDefault();
+// 	const { userName, userEmail, userAge } = e.currentTarget;
+
+// 	const data = {
+// 		name: userName.value,
+// 		email: userEmail.value,
+// 		age: userAge.value,
+// 	};
+// 	console.log(data);
+// }
+// const container = document.querySelector(".js-container");
+// console.log(container);
+// document.addEventListener("keydown", onKey);
+// container.addEventListener("keydown", onKey);
+
+// function onKey(e) {
+// 	console.log(e.code);
+// 	if (e.code === "Escape") {
+// 		// container.classList.toggle("tog");
+// 		container.classList.toggle("tog");
+// 	}
+// }
+
+// function onKey(e) {
+// 	console.log(e);
+// 	if (e.ctrlKey && e.code === "KeyC") {
+// 		alert("Are you copy?");
+// 		return;
+// 	}
+// }
+
+// Заборона копіювання з клавіатури
+//
+// function onKey(e) {
+// 	console.log(e);
+// 	if (e.ctrlKey && e.code === "KeyC") {
+// 		console.log("try copy");
+// 		e.preventDefault();
+// 		return;
+// 	}
+// }
+
 const cars = [
 	{
+		id: 1,
 		model: "Honda",
 		type: "Civic",
 		price: 12000,
 		img: "https://motormag.pl/wp-content/uploads/2022/03/honda-civic-type-r-2020.jpg.webp",
 	},
 	{
+		id: 2,
 		model: "Audi",
 		type: "Q7",
 		price: 40000,
 		img: "https://media.ed.edmunds-media.com/audi/q7/2022/oem/2022_audi_q7_4dr-suv_prestige_fq_oem_1_1280.jpg",
 	},
 	{
+		id: 3,
 		model: "BMW",
 		type: "5 series",
 		price: 50000,
 		img: "https://upload.wikimedia.org/wikipedia/commons/5/52/BMW_G30_FL_IMG_5351.jpg",
 	},
 	{
+		id: 4,
 		model: "Honda",
 		type: "Accord",
 		price: 20000,
 		img: "https://hips.hearstapps.com/hmg-prod/images/dsc01432-1677186780.jpg?crop=0.534xw:0.601xh;0.197xw,0.318xh&resize=768:*",
 	},
 	{
+		id: 5,
 		model: "Mercedes",
 		type: "S class",
 		price: 70000,
+		number: "+48123456789",
 		img: "https://www.topgear.com/sites/default/files/2022/03/1-Mercedes-S-Class-plug-in.jpg",
 	},
 	{
-		id: 4,
+		id: 6,
 		model: "Toyota",
 		type: "Camry",
 		price: 45000,
@@ -1357,20 +1776,280 @@ const cars = [
 	},
 ];
 
-const container = document.querySelector(".js-container");
-console.dir(container);
+// const list = document.querySelector(".js-list");
+// list.addEventListener("click", onClick);
+// const favouriteList = document.querySelector(".js-favourite-list");
+// const form = document.querySelector(".js-search-form");
+// form.addEventListener("submit", onSearch);
+// // const markup = cars
+// // 	.map(
+// // 		({ id, model, type, price, number = "none", img }) =>
+// // 			`<li data-id="${id}">
+// // 	<img src="${img}" alt="${model}" />
+// // 	<h2>Car: ${model}</h2>
+// // 	<h3>Model: ${type}</h3>
+// // 	<p>Price: ${price}</p>
+// // 	<p>Number: ${number}</p>
+// // </li>`,
+// // 	)
+// // 	.join("");
 
-const markup = cars
-	.map(
-		({ id = "none", model, type, price, img }) =>
-			`<li data-id="${id}">
-	<img src="${img}" alt="${model}" class="img">
-	<h2>Brand - ${model}</h2>
-	<h3>Model - ${type}</h3>
-	<p>Price - ${price}</p>
-</li>`,
-	)
-	.join("");
+// // list.insertAdjacentHTML("beforeend", markup);
+// // console.log(list);
 
-container.insertAdjacentHTML("beforeend", markup);
-console.dir(markup);
+// // function onSearch(e) {
+// // 	e.preventDefault();
+// // 	const form = e.currentTarget;
+// // 	const { query, select } = form.elements;
+// // 	const searchCar = cars.filter(item => item[select.value].toLowerCase() === query.value.trim().toLowerCase());
+// // 	console.log(searchCar);
+// // 	// 	console.dir(query.value);
+// // 	// 	console.dir(select.value);
+// // }
+
+// function createMarkup(arr) {
+// 	return arr
+// 		.map(
+// 			({ id, model, type, price, number = "none", img }) =>
+// 				`<li data-id="${id}">
+// 	<img src="${img}" alt="${model}" />
+// 	<div class="js-favorite">⭐</div>
+// 	<h2>Car: ${model}</h2>
+// 	<h3>Model: ${type}</h3>
+// 	<p>Price: ${price}</p>
+// 	<p>Number: ${number}</p>
+
+// </li>`,
+// 		)
+// 		.join("");
+// }
+// list.insertAdjacentHTML("beforeend", createMarkup(cars));
+
+// function onSearch(e) {
+// 	e.preventDefault();
+// 	const form = e.currentTarget;
+// 	const { query, select } = form.elements;
+// 	const searchCar = cars.filter(item => item[select.value].toLowerCase() === query.value.trim().toLowerCase());
+// 	list.innerHTML = createMarkup(searchCar);
+// 	// 	console.dir(query.value);
+// 	// 	console.dir(select.value);
+// }
+
+// function onClick(e) {
+// 	if (e.target.classList.contains("js-favorite")) {
+// 		e.target.classList.add("js-favourite-active");
+// 		const { id } = e.target.closest("li").dataset;
+// 		// console.dir(id);
+
+// 		const { model, type } = cars.find(({ id: carId }) => carId === Number(id));
+// 		// console.log(currentCar);
+// 		addFavourite(`${model}, ${type}`);
+// 	}
+// }
+
+// function addFavourite(currentCar) {
+// 	favouriteList.insertAdjacentHTML("beforeend", `<li>${currentCar}</li>`);
+// }
+//
+// const listEl = document.querySelector(".js-list");
+// listEl.addEventListener("click", onClick);
+
+// const formEl = document.querySelector(".js-form");
+// formEl.addEventListener("submit", onSearch);
+
+// const favoriteList = document.querySelector(".js-favorite-list");
+
+// function makeSearchCar(arr) {
+// 	return arr
+// 		.map(
+// 			({ id, model, type, price, number = "none", img }) => `<li data-id="${id}">
+// 					<img src="${img}" alt="${model}">
+// 					<div class='js-favorite'>⭐</div>
+// 					<h2>Model: ${model}</h2>
+// 					<h3>Type: ${type}</h3>
+// 					<p>Price: ${price}</p>
+// 					<p>Number: ${number}</p>
+// 				</li>`,
+// 		)
+// 		.join("");
+// }
+// listEl.insertAdjacentHTML("beforeend", makeSearchCar(cars));
+
+// function onSearch(event) {
+// 	event.preventDefault();
+
+// 	const form = event.currentTarget;
+
+// 	console.dir(form);
+
+// 	const { jsSelect, jsInput } = form.elements;
+// 	const serchCar = cars.filter(car => car[jsSelect.value].toLowerCase() === jsInput.value.trim().toLowerCase());
+// 	jsInput.value = "";
+// 	listEl.innerHTML = makeSearchCar(serchCar);
+
+// 	const resetBtn = document.querySelector(".js-reset");
+// 	resetBtn.addEventListener("click", e => {
+// 		if (e.target.classList.contains("js-reset")) {
+// 			listEl.innerHTML = "";
+// 			listEl.insertAdjacentHTML("beforeend", makeSearchCar(cars));
+// 		}
+// 	});
+// }
+
+// // const resetBtn = document.querySelector(".js-reset");
+// // resetBtn.addEventListener("click", makeClearList);
+
+// // function makeClearList(e) {
+// // 	if (e.target.classList.contains("js-reset")) {
+// // 		listEl.innerHTML = "";
+// // 		listEl.insertAdjacentHTML("beforeend", makeSearchCar(cars));
+// // 	}
+// // }
+
+// function onClick(event) {
+// 	event.preventDefault();
+
+// 	if (event.target.classList.contains("js-favorite")) {
+// 		const { id } = event.target.closest("li").dataset;
+// 		console.log(id);
+
+// 		const { model, type } = cars.find(({ id: carId }) => carId === Number(id));
+// 		addFavorite(`${model}, ${type}`);
+// 	}
+// }
+
+// function addFavorite(event) {
+// 	favoriteList.insertAdjacentHTML("beforeend", `<li>${event}</li>`);
+// }
+
+// const resetBtnFavorite = document.querySelector(".js-reset-favorite");
+// resetBtnFavorite.textContent = "Reset";
+// resetBtnFavorite.style.fontSize = "14px";
+// resetBtnFavorite.addEventListener("click", removeFavorite);
+
+// function removeFavorite(event) {
+// 	favoriteList.innerHTML = "";
+// }
+
+//
+//
+// 						Task 1
+// 						-------
+//
+// Ств. модільне вікно, яке буде відкриватись при кліку на кнопку в середині
+// тега body. Мод.вікно має закриватись по кліку на напівпрозорий оверлейб
+// та ні іконку хрестика в середині модалки
+//
+// const body = document.querySelector(".body");
+
+// const LOGIN = "admin";
+// const PASSWORD = "12345";
+
+// const openBtn = document.querySelector("#js-open-btn");
+// openBtn.addEventListener("click", onOpen);
+
+// const overlayEl = document.querySelector(".js-modal-wraper .overlay");
+// overlayEl.addEventListener("click", onClose);
+
+// const modalWraperEl = document.querySelector(".js-modal-wraper");
+
+// const closeBtn = document.querySelector(".js-modal-wraper .js-close-modal");
+// closeBtn.addEventListener("click", onClose);
+
+// const titleEl = document.querySelector(".js-title");
+
+// function onOpen() {
+// 	modalWraperEl.classList.remove("hidden");
+// 	document.addEventListener("keydown", onCloseWithEscape);
+
+// 	const errorEl = document.querySelector(".error");
+// 	errorEl.classList.add("hidden");
+// }
+
+// function onClose() {
+// 	modalWraperEl.classList.add("hidden");
+// 	document.removeEventListener("keydown", onCloseWithEscape);
+// 	form.reset();
+
+// 	// if (!errorEl.classList.contains("hidden")) {
+// 	// 	errorEl.classList.add("hidden");
+// 	// }
+// }
+
+// //
+// //
+
+// //
+// //
+// // 						Task 2
+// // 						------
+// //
+// // Додати в модальне вікно логіку закриття при натисканні на кнопку Escape
+// //
+// // document.addEventListener("keydown", onCloseWithEscape);
+
+// function onCloseWithEscape(e) {
+// 	if (e.code === "Escape" && !modalWraperEl.classList.contains("hidden")) {
+// 		onClose();
+// 	}
+// }
+
+// //
+// //
+
+// //
+// //
+// // 						Task 3.
+// // 						-------
+// //
+// // Створити форму реєстрації в модалці користувача за допомогою js,
+// // де буде 2 поля:
+// // 1. Поле логін;
+// // 2. Поле пароль;
+// // Захаркодити вірні логін і пароль в Константах.
+// // Додати логіку сабміта форми,при сабміті перевіряємо вірні логін і пароль.
+// //
+// // Умови:
+// // 	1. Якщо логін і пароль співпадають, то видаляємо форму з документа
+// // і показуємо h2 з текстом "Вхід успішний!"
+// // 	2. Якщо логін і пароль не співпадають з даними констант, то
+// //показуємо під формою помилку червоним кольором "Логін або пароль невірні!"
+// //
+
+// const markup = `
+// <form action="submit" class="js-form">
+// 	<label class="js-label">
+// 		Name
+// 		<input name="userName" />
+// 	</label>
+// 	<label class="js-label">
+// 		Password
+// 		<input name="userPassword" />
+// 	</label>
+// 	<button>Submit</button>
+// 	<p class="error hidden">Логін або пароль не вірні!</p>
+// </form>`;
+
+// const modalEl = document.querySelector(".js-modal");
+// modalEl.insertAdjacentHTML("beforeend", markup);
+
+// const form = document.querySelector(".js-form");
+// form.addEventListener("submit", onSubmit);
+
+// function onSubmit(e) {
+// 	e.preventDefault();
+// 	const formEl = e.currentTarget;
+// 	const errorEl = document.querySelector(".error");
+
+// 	const { userName, userPassword } = formEl.elements;
+
+// 	if (userName.value === LOGIN && userPassword.value === PASSWORD) {
+// 		onClose();
+// 		titleEl.classList.remove("hidden");
+// 		openBtn.classList.add("hidden");
+// 	} else {
+// 		errorEl.classList.remove("hidden");
+// 	}
+// }
+// //
+// //

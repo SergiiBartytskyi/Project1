@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.css" integrity="sha512-C+KPK958JmUdU8B9SVr8YpEZtQ1T1XrFX/OLvE/lt336DFWXFHL5Y9/tUewMEU+Uy3dUAS363XXLdBine0WDyQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<title>Lesson 7</title>
+	</head>
+	<body>
+		<div>
+			<!-- Конспект -->
+			<!-- Спливання подій -->
+			<!-- <div id="parent">
+				Parent
+				<div id="child">
+					Child
+					<div id="descendant">Descendant</div>
+				</div>
+			</div> -->
+
+			<!-- Палітра кольорів -->
+			<!-- <p class="output">Selected color: -</p>
+		<div class="color-palette"></div> -->
+
+			<!-- Throttle і Debounce -->
+			<!-- <p class="cta">Scroll me</p>
+
+		<div class="event-counter">
+			<div class="box">
+				<p>Number of scroll events</p>
+				<span class="output">0</span>
+			</div>
+		</div> -->
+
+			<!-- Throttle -->
+			<!-- <p class="cta">Scroll me</p>
+
+		<div class="event-counter">
+			<div class="box">
+				<p>No timing function</p>
+				<span class="output vanilla">0</span>
+			</div>
+
+			<div class="box">
+				<p>Throttled</p>
+				<span class="output throttled">0</span>
+			</div>
+		</div> -->
+
+			<!-- Debounce -->
+			<!-- <p class="cta">Scroll me</p>
+
+		<div class="event-counter">
+			<div class="box">
+				<p>No timing function</p>
+				<span class="output vanilla">0</span>
+			</div>
+
+			<div class="box">
+				<p>Throttled</p>
+				<span class="output throttled">0</span>
+			</div>
+
+			<div class="box">
+				<p>Debounced</p>
+				<span class="output debounced">0</span>
+			</div>
+		</div> -->
+
+			<!-- Режими методу debounce​ -->
+			<!-- <p class="cta">Scroll me</p>
+
+		<div class="container">
+			<div class="box">
+				<p>No timing function</p>
+				<span class="output vanilla">0</span>
+			</div>
+
+			<div class="box">
+				<p>Throttled</p>
+				<span class="output throttled">0</span>
+			</div>
+
+			<div class="box">
+				<p>Trailing debounce</p>
+				<span class="output trailing">0</span>
+			</div>
+
+			<div class="box">
+				<p>Leading debounce</p>
+				<span class="output leading">0</span>
+			</div>
+		</div> -->
+
+			<!-- Атрибут loading​ -->
+			<!-- <img
+			src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			loading="lazy"
+			alt="Close-Up Photography of Sleeping Tabby Cat"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			loading="lazy"
+			alt="Photo of Grey Tabby Kitten Lying Down"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			src="https://images.pexels.com/photos/1440403/pexels-photo-1440403.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			loading="lazy"
+			alt="Orange Kitten"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			src="https://images.pexels.com/photos/2817421/pexels-photo-2817421.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			loading="lazy"
+			alt="Photo of Tabby Cat Sleeping On Chair"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			loading="lazy"
+			alt="Brown Cat With Green Eyes"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			src="https://images.pexels.com/photos/3635550/pexels-photo-3635550.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			loading="lazy"
+			alt="Close-up Photo of Grey and Brown Cat"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			loading="lazy"
+			alt="Close-Up Photo of Yellow and White Cat"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		> -->
+
+			<!-- Бібліотека lazysizes -->
+			<!-- <img
+			class="lazyload blur-up"
+			src="https://via.placeholder.com/960"
+			data-src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			alt="Close-Up Photography of Sleeping Tabby Cat"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			class="lazyload blur-up"
+			src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+			data-src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			alt="Photo of Grey Tabby Kitten Lying Down"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			class="lazyload blur-up"
+			src="https://via.placeholder.com/960"
+			data-src="https://images.pexels.com/photos/1440403/pexels-photo-1440403.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			alt="Orange Kitten"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			class="lazyload blur-up"
+			src="https://via.placeholder.com/960"
+			data-src="https://images.pexels.com/photos/2817421/pexels-photo-2817421.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			alt="Photo of Tabby Cat Sleeping On Chair"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			class="lazyload blur-up"
+			src="https://via.placeholder.com/960"
+			data-src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			alt="Brown Cat With Green Eyes"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			class="lazyload blur-up"
+			src="https://via.placeholder.com/960"
+			data-src="https://images.pexels.com/photos/3635550/pexels-photo-3635550.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			alt="Close-up Photo of Grey and Brown Cat"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		>
+
+		<img
+			class="lazyload blur-up"
+			src="https://via.placeholder.com/960"
+			data-src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=960"
+			alt="Close-Up Photo of Yellow and White Cat"
+			width="960"
+		/>
+
+		<p
+			>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad fugiat, error quisquam alias eaque officia cum quasi
+			enim libero a molestiae repudiandae repellat deserunt debitis deleniti vel accusantium. Aut enim doloremque ullam
+			quibusdam consequatur in repellendus beatae? Aspernatur sequi fugit vero provident ea perspiciatis eos officia non
+			reiciendis adipisci ipsa, nemo, similique, molestias rerum totam debitis nulla a iure inventore! Eum, voluptatem,
+			sit corrupti at molestiae rerum nulla ratione optio est alias perspiciatis quas. Aliquam libero placeat,
+			distinctio unde deleniti minus commodi at maiores officiis doloremque quae voluptates quia aliquid doloribus, vero
+			aspernatur, aperiam corrupti dicta eligendi rerum? In, voluptate.</p
+		> -->
+		</div>
+		<div>
+			<!-- Репета -->
+
+			<!-- Делегування -->
+
+			<!-- <p>_</p>
+			<button class="js-add-btn">Add button</button>
+			<hr />
+			<div class="container js-container">
+				<button type="button">Button 1</button>
+				<button type="button">Button 2</button>
+				<button type="button">Button 3</button>
+				<button type="button">Button 4</button>
+				<button type="button">Button 5</button>
+			</div>
+		</div> -->
+
+			<!-- Task. Tags -->
+
+			<!-- <ul class="tags js-tags">
+			<li class="tags__item"><button class="tags__btn" data-value="html">#html</button></li>
+			<li class="tags__item"><button class="tags__btn" data-value="css">#css</button></li>
+			<li class="tags__item"><button class="tags__btn" data-value="javascript">#javascript</button></li>
+			<li class="tags__item"><button class="tags__btn" data-value="npm">#npm</button></li>
+			<li class="tags__item"><button class="tags__btn" data-value="webpack">#webpack</button></li>
+			<li class="tags__item"><button class="tags__btn" data-value="react">#react</button></li>
+			<li class="tags__item"><button class="tags__btn" data-value="redux">#redux</button></li>
+			<li class="tags__item"><button class="tags__btn" data-value="nodejs">#nodejs</button></li>
+		</ul> -->
+
+			<!-- Task. Colorpicker -->
+
+			<!-- <div class="palette js-palette"> -->
+			<!-- <div class="color-card">
+					<div class="color-swatch" data-hex="#955014" data-rgb="149,80,20" style="background-color: #955014"></div>
+					<div class="color_meta"><p>HEX: #955014</p><p>RGB: 149,80,20</p></div>
+				</div> -->
+			<!-- </div> -->
+
+			<!-- Task. Filter -->
+
+			<!-- <label>
+				Що шукаємо?
+				<input type="text" id="filter" />
+			</label>
+
+			<ul class="js-list"></ul> -->
+
+			<!-- Task. Ліниве завантаження зображень -->
+
+			<!-- <ul class="feed">
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://avcdn.av.by/wisiwigimage/0001/8883/6997.jpeg"
+						alt="Black auto"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consequatur sed maxime asperiores, nemo non
+						ducimus quisquam dolores adipisci quia reiciendis, saepe illum omnis! Laudantium nulla illum officiis
+						eligendi beatae aliquid eveniet tempora quia sint nam natus, voluptates magnam dicta dignissimos dolorum
+						quam eaque possimus obcaecati? Fugiat beatae earum rerum perferendis amet a alias saepe cupiditate tenetur.
+						Nihil vel facere harum inventore, aspernatur voluptatibus culpa alias natus dolor distinctio odit quisquam,
+						cum repellendus? Excepturi exercitationem ea itaque velit maiores quod ipsum, necessitatibus non ducimus
+						obcaecati perferendis esse earum, dolor accusantium pariatur officiis dignissimos vero reiciendis dolores
+						nostrum sit praesentium? Nostrum.</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://www.iphones.ru/wp-content/uploads/2017/03/mb_gt.jpg"
+						alt="Red auto"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quod facere quis ab laudantium dolorum iusto
+						aliquid consequuntur nesciunt culpa inventore totam reprehenderit minus dignissimos doloremque similique
+						magni iure officia id tempora, amet modi nihil rem! Sunt nam illum incidunt, quibusdam quas accusantium
+						facere deleniti architecto quo nisi tenetur eius blanditiis ex animi nihil ipsa nemo assumenda neque, at
+						adipisci labore sequi! Ut nesciunt dolorum cupiditate fugiat omnis quos assumenda quia at, quod ipsum
+						repudiandae dignissimos sed quam. Nihil atque minima eum recusandae vitae! Dolor optio delectus laudantium
+						quae neque debitis voluptates eaque natus unde sint. Nisi ipsum dicta quos.</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://intercargo.by/upload/iblock/e40/tyodnnu2f92ov3bz9nglhlzuk1mtmyzg.jpg"
+						alt="Mustang"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cumque suscipit blanditiis reiciendis
+						facere ab consequatur commodi dolores provident alias! Sint voluptatibus aliquam eos dolore soluta! Fugiat,
+						dolores quos. Eveniet illo quas error suscipit fuga esse reprehenderit natus, illum laudantium ad repellat
+						inventore harum odio dignissimos cumque deleniti a iste culpa? Cum labore quibusdam quos perspiciatis neque,
+						quas doloribus sequi iure alias soluta quidem est id. Placeat atque voluptatum a rem. Dolores facilis, fuga
+						corporis, adipisci perferendis magni enim quas voluptate laboriosam dolorum eius impedit molestias veritatis
+						placeat. Repudiandae soluta non natus eveniet dolor sunt itaque? Nobis repellendus possimus deserunt.</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://img.tsn.ua/cached/472/tsn-ed71814124f95cefb3093cdb7dd2dd14/thumbs/428x268/56/fe/35c2300de0c12758e8453e8ff846fe56.jpeg"
+						alt="Audi"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ratione earum quaerat. Omnis sit
+						temporibus quod nemo, praesentium obcaecati nostrum libero tempora mollitia id ipsa placeat consequatur. Eum
+						quisquam quia soluta distinctio ipsa odio ullam, nulla nostrum cum velit perferendis maiores, quis itaque
+						odit corporis inventore! Omnis commodi, eveniet obcaecati ab incidunt vitae suscipit corporis cumque
+						cupiditate ipsam asperiores voluptatum tempore delectus repudiandae molestiae saepe expedita dolore
+						voluptatem nostrum. Libero enim hic ad suscipit corporis fuga, perspiciatis laborum animi nulla provident
+						vero voluptatum. Quas aperiam, maiores placeat vitae iure perferendis itaque ad nihil et, eaque dolor
+						voluptas? Ipsum, distinctio dolorem?</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDx6AAeK9e98ykjACkX9XJw1iQFsDTsEh5A&usqp=CAU"
+						alt="Ferarri"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque nesciunt doloribus similique ipsa,
+						est dolor. Accusamus quasi quod incidunt temporibus laboriosam libero cupiditate explicabo, id voluptatibus
+						sint doloremque laborum, veniam laudantium eveniet corrupti eum, optio fuga debitis dolorem possimus cumque?
+						Ea sapiente officia asperiores tempore modi, porro nemo iure praesentium officiis vero, minima et autem
+						debitis nobis ut ducimus? Optio, eligendi dolores fugit possimus sed dolorem molestias nisi vitae harum
+						commodi, natus reiciendis molestiae laudantium incidunt, accusamus quis illum similique velit. Et, quod esse
+						dolorum illo amet odit consequatur odio nam in cum libero accusantium a voluptate? Repellat, similique.</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK170WaSQenJhOv_LF1R6QOiE8-AB3FiQKOw&usqp=CAU"
+						alt="Mercedes"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque tenetur impedit magni molestiae vel soluta
+						consequatur eaque nostrum facilis repellat mollitia nobis minus a quos, repudiandae rerum reprehenderit
+						iure, natus fuga ipsa ratione veniam id voluptatum praesentium! Et ex obcaecati quo laborum iusto vel, velit
+						ipsam tenetur sequi id sed odio! Excepturi ipsum hic quae culpa tempore debitis corrupti odit autem
+						temporibus alias a ab unde quos blanditiis, voluptate expedita explicabo eaque numquam inventore eos ducimus
+						commodi rem. Cum commodi dolor aut nobis quaerat minus ipsum? Esse corporis corrupti eum nemo earum
+						voluptate quia non totam. Labore laudantium consequatur repudiandae?</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdD3Y3KLVSzCZX3Q_9EwI0B_7R9FZ_V60c0A&usqp=CAU"
+						alt="Bugatti"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic fugit voluptatum modi quia reprehenderit.
+						Odit soluta possimus libero mollitia sit suscipit quaerat maiores minima unde, illo aliquam accusamus eius
+						dolorem ipsum nesciunt ducimus dolore ad similique in. Ipsa illum sint aliquid. Sunt ipsam doloribus odio
+						optio corrupti autem perferendis quasi modi voluptatum natus vel obcaecati expedita qui dicta, in debitis
+						provident fugit? Et voluptatibus vitae odio fugit debitis sunt inventore, veniam quis quos perferendis
+						assumenda mollitia velit blanditiis neque suscipit distinctio accusantium nostrum ab tempora culpa!
+						Sapiente, inventore velit! Quaerat iusto aspernatur dolorum, est minus voluptates. Fugit sunt adipisci
+						aspernatur!</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5DA1jGnmwg-3wZoG-mQBv8XWRx_qdQvV4vA&usqp=CAU"
+						alt="Skoda"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto pariatur facere itaque autem aperiam qui.
+						Sunt, modi laborum. Corporis facilis eligendi aliquid quae fuga, nostrum provident totam doloremque
+						inventore ducimus? Ea voluptate molestiae odit accusantium cumque laborum dolorem enim adipisci pariatur.
+						Quia ducimus nobis sequi nulla, repellendus, error, praesentium consequatur corrupti aut molestiae doloribus
+						dignissimos aperiam eveniet? Nostrum necessitatibus, eius delectus sint nihil, culpa quaerat officiis
+						officia deserunt ut ratione porro maiores est vitae cupiditate eum aliquam pariatur itaque fuga sapiente!
+						Vitae eos saepe nesciunt vero eligendi deleniti nisi molestiae ab ad. Exercitationem dolor assumenda
+						obcaecati dolorum ab. Quia, nemo?</p
+					>
+				</li>
+				<li class="feed__item">
+					<img
+						loading="lazy"
+						class="lazyload"
+						data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpOpCm1-e34zouo_iWIXpa_Esd9yOsoPP0ow&usqp=CAU"
+						alt="BMW"
+						width="1080"
+						height="600"
+					/>
+					<p
+						>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error optio, corporis facilis quod amet
+						perferendis tempora sint impedit ut doloribus mollitia dolorem saepe. Autem praesentium magni atque ex
+						expedita quia, exercitationem facilis ab quo? Quam debitis natus architecto consectetur possimus quibusdam
+						odit ullam tempora animi in veniam, praesentium quis neque cum, soluta at iure? Voluptatem unde vel cum
+						distinctio. Quam explicabo rerum repellat placeat maxime officiis iure sed temporibus ex quas voluptates
+						architecto, dolor error magnam est perferendis iste eos sint? Maxime, iste. Praesentium repellendus atque
+						illo saepe asperiores, facilis odit aliquid eligendi accusamus ullam eum veritatis corrupti temporibus
+						repudiandae?</p
+					>
+				</li>
+			</ul> -->
+		</div>
+		<div>
+			<!-- Рисіч -->
+
+			<!-- <div class="container js-container">
+				<div class="box js-box item-red" data-color="red"></div>
+				<div class="box js-box item-green" data-color="green"></div>
+				<div class="box js-box item-blue" data-color="blue"></div>
+			</div>
+		</div> -->
+
+				<!-- Хрестики-нулики -->
+
+	<!-- <div class="container">
+		<div class="content js-content"></div>
+	</div> -->
+
+
+	<!-- Cars -->
+
+	<!-- <ul class="js-container">
+		
+	</ul> -->
+
+	<!-- throttle & debounce -->
+
+	<!-- <input type="text"> -->
+
+	<!-- Cats -->
+	<!-- <ul class="js-list">
+		
+	</ul> -->
+
+	<!-- Task 8. Calculator -->
+
+	<!-- <div class="container">
+		<h2 class="title">Скільки коштує м'ясо?</h2>
+		<form class="form">
+			<label for="price">Ціна, грн</label>
+			<input type="number" name="price" id="price" value="50">
+			<label for="quantity">Кількість<span class="amount">1</span> кг</label>
+			<input type="range" name="quantity" id="quantity" value="1" min="1", max="200">
+		</form>
+	</div> -->
+
+	<!-- Task 9. Gallery -->
+<!-- <div class="task__solution">
+	<div class="images-gallery">
+		
+	</div>
+</div> -->
+
+<!-- <div class="container">
+	<ul class="gallery">
+		
+	</ul>
+</div>
+<div class="image-modal-overlay">
+	<div class="image-modal"></div>
+</div> -->
+
+				<!-- Melnyk -->
+
+<!-- <div class="container">
+	<button class="btn win">Click me</button>
+	<button class="btn fail">Click me</button>
+	<button class="btn danger">Click me</button>
+	<button class="btn attention">Click me</button>
+	<button class="btn">Click me</button>
+</div> -->
+	
+<!-- <header></header>
+<main>
+	<section class="section red"><h2>Title</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita asperiores rem doloremque quas cum aliquam voluptatum perferendis officia laboriosam, soluta ullam voluptas. Rerum, ex labore placeat nostrum id deleniti in recusandae optio provident nam, ea natus nesciunt architecto possimus. Blanditiis atque in culpa perferendis possimus distinctio at eum magnam!</p><button class="modal" data-modal="modalWindow">Open Modal</button></section>
+	<section class="section blue"><h2>Title</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita asperiores rem doloremque quas cum aliquam voluptatum perferendis officia laboriosam, soluta ullam voluptas. Rerum, ex labore placeat nostrum id deleniti in recusandae optio provident nam, ea natus nesciunt architecto possimus. Blanditiis atque in culpa perferendis possimus distinctio at eum magnam!</p></section>
+	<section class="section green"><h2>Title</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita asperiores rem doloremque quas cum aliquam voluptatum perferendis officia laboriosam, soluta ullam voluptas. Rerum, ex labore placeat nostrum id deleniti in recusandae optio provident nam, ea natus nesciunt architecto possimus. Blanditiis atque in culpa perferendis possimus distinctio at eum magnam!</p><button class="modal" data-modal="modalWindow">Open Modal</button></section>
+	<section class="section yellow"><h2>Title</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita asperiores rem doloremque quas cum aliquam voluptatum perferendis officia laboriosam, soluta ullam voluptas. Rerum, ex labore placeat nostrum id deleniti in recusandae optio provident nam, ea natus nesciunt architecto possimus. Blanditiis atque in culpa perferendis possimus distinctio at eum magnam!</p></section>
+	<section class="section purple"><h2>Title</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima expedita asperiores rem doloremque quas cum aliquam voluptatum perferendis officia laboriosam, soluta ullam voluptas. Rerum, ex labore placeat nostrum id deleniti in recusandae optio provident nam, ea natus nesciunt architecto possimus. Blanditiis atque in culpa perferendis possimus distinctio at eum magnam!</p><button class="modal" data-modal="modalWindow">Open Modal</button></section>
+</main>
+<footer></footer> -->
+<!-- <form class="form">
+	<input type="text" class="input">
+	<button class="submit" type="submit">Create item</button>
+</form>
+
+<ul class="container">
+	
+</ul> -->
+<!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lazyload/2.0.3/lazyload-min.js"
+			integrity="sha512-AsI20ZcrzATYNk6jHw9XywNXt2fqEX03x4hArLWhRuHTYdXFpPUhEuRgt32Akfbj5O4FR5xUxoH9gFWujpzo0w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script> -->
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+			integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.0/basicLightbox.min.js" integrity="sha512-jIc3kBeyfyLXBTmzUIXnbGiVK2wgWGcDIkJwkFW4bQ6v2h/piOKLwIfy3wOmKHWIu8DgYSKVth0DMUvExMYcOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="/js/pattern_&_target.js"></script>
+	</body>
+</html>
