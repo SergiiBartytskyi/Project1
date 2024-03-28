@@ -1,4 +1,4 @@
-console.log(333);
+import BSN from 'bootstrap.native';
 
 // console.log("First log");
 // console.log("Second log");
@@ -1030,35 +1030,42 @@ Promise 1
 // 						-----------------
 //
 // const refs = {
-// 	modal: document.querySelector("#subsription-modal"),
+//   modal: document.querySelector('#subscription-modal'),
+//   subscribeBtn: document.querySelector('button[data-subscribe]'),
 // };
-// const modal = new BSN.Modal("#subsription-modal");
-// console.log(modal);
-
-// refs.modal.addEventListener("hide.bs.modal", () => {
-// 	setTimeout(() => {
-// 		console.log("Відкриваємо модалку");
-// 		modal.show();
-// 	}, PROMPT_DELAY);
-// });
-
 // const PROMPT_DELAY = 3000;
 // const MAX_PROMPT_ATTEMPTS = 3;
-
-// setTimeout(() => {
-// 	console.log("Відкриваємо модалку");
-// 	modal.show();
-// }, PROMPT_DELAY);
 // let promptCounter = 0;
 // let hasSubscribed = false;
+// const modal = new BSN.Modal('#subscription-modal');
 
-// const intervalId = setInterval(() => {
-// 	if (promptCounter === MAX_PROMPT_ATTEMPTS) {
-// 		console.log("Stopped interval");
-// 		clearInterval(intervalId);
-// 		return;
-// 	}
+// openModal();
 
-// 	console.log("Subscribe to the newsletter - " + Date.now());
-// 	promptCounter += 1;
-// }, PROMPT_DELAY);
+// refs.modal.addEventListener('hide.bs.modal', openModal);
+// refs.subscribeBtn.addEventListener('click', onSubscribeBtnClick);
+
+// function openModal() {
+//   if (promptCounter === MAX_PROMPT_ATTEMPTS || hasSubscribed) {
+//     console.log('Максимальное кол-во надоеданий или подписался');
+//     return;
+//   }
+
+//   setTimeout(() => {
+//     console.log('Открываем надоедалку');
+//     modal.show();
+//     promptCounter += 1;
+//   }, PROMPT_DELAY);
+// }
+
+// function onSubscribeBtnClick() {
+//   hasSubscribed = true;
+//   modal.hide();
+// }
+//
+//
+
+//
+//
+//                                  Task Date
+//                                  ---------
+//
