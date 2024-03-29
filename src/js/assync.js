@@ -1069,3 +1069,183 @@ Promise 1
 //                                  Task Date
 //                                  ---------
 //
+// let date = new Date();
+// console.log(date);
+//Fri Mar 29 2024 15: 51: 41 GMT +0100(за центральноєвропейським стандартним часом)
+
+// console.log(date.getDay());
+// // 5
+
+// console.log(date.getMonth());
+// // 2
+
+// console.log(date.getYear());
+// // 124
+
+// console.log(date.getTime());
+// // 1711724179331
+
+// Unix Time - від 1 01 1970 00:00
+// date = new Date(1711724179331);
+// console.log(date);
+//Fri Mar 29 2024 15:56:19 GMT+0100 (за центральноєвропейським стандартним часом)
+
+// const date1 = new Date();
+// console.log('date1: ', date1);
+// //date1:  Fri Mar 29 2024 16:10:33 GMT+0100 (за центральноєвропейським стандартним часом)
+
+// setTimeout(() => {
+//   const date2 = new Date();
+
+//   console.log('date1: ', date1);
+//   //date1:  Fri Mar 29 2024 16:10:33 GMT+0100 (за центральноєвропейським стандартним часом)
+
+//   console.log('date1: ', date2);
+//   //date2:  Fri Mar 29 2024 16:13:36 GMT+0100 (за центральноєвропейським стандартним часом)
+
+//   const a = date2 - date1;
+//   console.log('date2 - date1: ', a);
+//   //3003
+
+//   console.log(new Date(a));
+//   //Thu Jan 01 1970 01:00:03 GMT+0100 (за центральноєвропейським стандартним часом)
+// }, 3000);
+
+// const date = new Date().getTime();
+// console.log(date);
+// 1711725197427
+//
+//
+
+//
+//
+//                      Date.now()
+//                      ---------
+//
+// Статичний метод який не створює обєкт. Повертає к-ть unix-секунд.
+//
+// const date1 = Date.now();
+// console.log('date1: ', date1);
+// //date1:  1711725472524
+
+// setTimeout(() => {
+//   const date2 = Date.now();
+
+//   console.log('date1: ', date1);
+//   //date1:  1711725472524
+
+//   console.log('date1: ', date2);
+//   //date2:  1711725475525
+
+//   const a = date2 - date1;
+//   console.log('date2 - date1: ', a);
+//   //3001
+
+//   console.log(Date.now(a));
+//   // 1711725475525
+// }, 3000);
+//
+//
+
+//
+//
+//                      Task. Timer
+//                      -----------
+//
+// class Timer {
+//   constructor({ onTick }) {
+//     this.intervalId = null;
+//     this.isActive = false;
+//     this.onTick = onTick;
+
+//     this.init();
+//   }
+
+//   init() {
+//     const time = this.getTimeComponents(0);
+//     this.onTick(time);
+//   }
+
+//   start() {
+//     if (this.isActive) {
+//       return;
+//     }
+
+//     const startTime = Date.now();
+//     this.isActive = true;
+
+//     this.intervalId = setInterval(() => {
+//       const currentTime = Date.now();
+//       const deltaTime = currentTime - startTime;
+//       const time = this.getTimeComponents(deltaTime);
+
+//       this.onTick(time);
+//     }, 1000);
+//   }
+
+//   stop() {
+//     clearInterval(this.intervalId);
+//     this.isActive = false;
+//     const time = this.getTimeComponents(0);
+//     this.onTick(time);
+//   }
+
+//   // * Отримує число;
+//   // * Приводить число до рядка;
+//   // * Додає в число "0".якщо число менше 2 - х зназів;
+
+//   pad(value) {
+//     return String(value).padStart(2, '0');
+//   }
+
+//   // * Приймає час в мілісек;
+//   // * Вираховує скільки в них поміщається годин / хвилин / секунд;
+//   // * Повертає об.з властивостями hours, mins, secs;
+//   getTimeComponents(time) {
+//     const hours = this.pad(
+//       Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+//     );
+//     const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+//     const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
+//     return { hours, mins, secs };
+//   }
+// }
+
+// const timer = new Timer({
+//   onTick: updateClockface,
+// });
+
+// timer.start();
+
+// function updateClockface({ hours, mins, secs }) {
+//   refs.clockface.textContent = `${hours}:${mins}:${secs}`;
+// }
+
+// // // * Отримує число;
+// // // * Приводить число до рядка;
+// // // * Додає в число "0".якщо число менше 2 - х зназів;
+
+// // function pad(value) {
+// //   return String(value).padStart(2, '0');
+// // }
+
+// // * Приймає час в мілісек;
+// // * Вираховує скільки в них поміщається годин / хвилин / секунд;
+// // * Повертає об.з властивостями hours, mins, secs;
+
+// // function getTimeComponents(time) {
+// //   const hours = pad(
+// //     Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+// //   );
+// //   const mins = pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+// //   const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
+// //   return { hours, mins, secs };
+// // }
+// const refs = {
+//   startBtn: document.querySelector('button[data-action-start]'),
+//   stopBtn: document.querySelector('button[data-action-stop]'),
+//   clockface: document.querySelector('.js-clockface'),
+// };
+
+// refs.startBtn.addEventListener('click', timer.start.bind(timer));
+// refs.stopBtn.addEventListener('click', timer.stop.bind(timer));
