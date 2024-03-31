@@ -1249,3 +1249,269 @@ Promise 1
 
 // refs.startBtn.addEventListener('click', timer.start.bind(timer));
 // refs.stopBtn.addEventListener('click', timer.stop.bind(timer));
+//
+//
+
+//
+//
+//                          Promise
+//                          ------
+//
+// const promise = new Promise((resolve, reject) => {
+//   const canFulfill = Math.random() > 0.5;
+
+//   setInterval(() => {
+//     if (canFulfill) {
+//       resolve('Проміс виконався успішно (виконано, fulfilled)!');
+//     }
+
+//     reject('Проміс виконався з помилкою (відхилено, rejected)');
+//   }, 1000);
+// });
+
+// promise.then(
+//   result => {
+//     console.log(result);
+//   },
+//   error => {
+//     console.log(error);
+//   }
+// );
+
+// promise.then(onFulfilled, onRejected);
+
+// function onFulfilled(result) {
+//   console.log(`✅ ${result}`);
+// }
+// function onRejected(error) {
+//   console.log(`❌ ${error}`);
+// }
+
+// promise
+//   .then(result => {
+//     console.log(result);
+//     return 5;
+//   })
+//   .then(x => {
+//     console.log(x);
+
+//     return 10;
+//   })
+//   .then(y => {
+//     console.log(y);
+//   });
+
+// promise
+//   .then(onFulfilled)
+//   .then(x => {
+//     console.log(x);
+
+//     throw Error('помилка в другому then');
+
+//     return 10;
+//   })
+//   .then(y => {
+//     console.log(y);
+//   })
+//   .catch(error => console.log(error))
+//   .finally(() => console.log('Я буду виконаним в будь якому випадку!'));
+//
+//
+
+//
+//
+//                      Task
+//                      ----
+//
+// const makeOrder = dish => {
+//   const DELAY = 1000;
+
+//   const promise = new Promise((resolve, rejected) => {
+//     const passed = Math.random() > 0.5;
+//     setTimeout(() => {
+//       if (passed) {
+//         resolve('Ось ваша страва!');
+//       } else {
+//         rejected('Вибачте, немає продуктів!');
+//       }
+//     }, DELAY);
+//   });
+
+//   return promise;
+// };
+
+// const makeOrder = dish => {
+//   return Promise.resolve(`Ось ваша страва ${dish}!`);
+// };
+
+// makeOrder('пиріжок').then(onMakeOrderSuccess);
+
+// function onMakeOrderSuccess(result) {
+//   console.log('onMakeOrderSuccess');
+//   console.log(result);
+// }
+
+// function onMakeOrderError(error) {
+//   console.log('onMakeOrderError');
+//   console.log(error);
+// }
+//
+//
+
+//
+//
+//                      Task. Pokemon
+//                      -------------
+//
+// const fetchPokemonId = id => {
+//   return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
+// };
+
+// // fetchPokemonId(1, onFetchSuccess, onFetchError);
+// fetchPokemonId(1).then(onFetchSuccess).catch(onFetchError);
+
+// function onFetchSuccess(pokemon) {
+//   console.log('onFetchSuccess -> onFetchSuccess');
+//   console.log(pokemon);
+// }
+// function onFetchError(error) {
+//   console.log('onFetchError -> onFetchError');
+//   console.log('Це в блоці catch');
+//   console.log(error);
+// }
+//
+//
+
+//
+//
+// const makePromise = () => {
+//   return new Promise((resolve, reject) => {
+//     const passed = Math.random() > 0.5;
+//     setTimeout(() => {
+//       if (passed) {
+//         resolve('Це resolve');
+//       }
+
+//       reject('Це reject');
+//     }, 2000);
+//   });
+// };
+
+// makePromise()
+//   .then(result => console.log(result))
+//   .catch(error => console.log(error));
+//
+//
+
+//
+//
+//                      Task. Horses
+//                      ------------
+//
+// const horses = [
+//   'Secretariat',
+//   'Eclipse',
+//   'West Australian',
+//   'Flying Fox',
+//   'Seabiscuit',
+// ];
+
+// let raceCounter = 0;
+
+// const refs = {
+//   startBtn: document.querySelector('.js-start-race'),
+//   winnerField: document.querySelector('.js-winner'),
+//   progressField: document.querySelector('.js-progress'),
+//   tableBody: document.querySelector('.js-results-table > tbody'),
+// };
+
+// refs.startBtn.addEventListener('click', onStart);
+
+// function onStart() {
+//   raceCounter += 1;
+
+//   const promises = horses.map(run);
+
+//   updateWinnerField('');
+//   updateProgressField('🍎 Заїзд почався. Ставки не приймаються!');
+//   determineWinner(promises);
+//   waitForAll(promises);
+// }
+// function determineWinner(horsesP) {
+//   Promise.race(horsesP).then(({ horse, time }) => {
+//     updateWinnerField(`📣 Переміг ${horse}, фінішував за ${time} часу`);
+//     updateResultsTable({ horse, time, raceCounter });
+//   });
+// }
+
+// function waitForAll(horsesP) {
+//   Promise.all(horsesP).then(() => {
+//     updateProgressField('🔒 Заїзд закінчився. Ставки приймаються!');
+//   });
+// }
+
+// function updateWinnerField(message) {
+//   refs.winnerField.textContent = message;
+// }
+
+// function updateProgressField(message) {
+//   refs.progressField.textContent = message;
+// }
+
+// function updateResultsTable({ horse, time, raceCounter }) {
+//   const tr = `<tr><td>${raceCounter}</td><td>${horse}</td><td>${time}</td></tr>`;
+//   refs.tableBody.insertAdjacentHTML('beforeend', tr);
+// }
+
+// // console.log(
+// //   '%c 🍎 Заїзд почався. Ставки не приймаються!',
+// //   'color: brown; font-size: 14px;'
+// // );
+
+// // const promises = horses.map(horse => run(horse));
+// // const promises = horses.map(run);
+// // console.log(promises);
+
+// /*
+// Promise.race[] - статичний метод. Очікує перший виконаний promise
+//  */
+
+// // Promise.race(promises).then(({ horse, time }) => {
+// //   console.log(
+// //     `%c 📣 Переміг ${horse}, фінішував за ${time} часу`,
+// //     'color: green; font-size: 14px;'
+// //   );
+// // });
+// /*
+// Promise.all([]) - для очікування всіх промісів
+//  */
+
+// // Promise.all(promises).then(x => {
+// //   console.log(x);
+// // });
+// // console.log(
+// //   `%c 📣 Переміг ${1}, фінішував за ${1} часу`,
+// //   'color: green; font-size: 14px;'
+// // );
+// // console.log(
+// //   `%c 🔒 Заїзд закінчився. Ставки приймаються!`,
+// //   'color: blue; font-size: 14px;'
+// // );
+
+// // run('Mango')
+// //   .then(x => console.log(x))
+// //   .catch(error => console.log(error));
+
+// function run(horse) {
+//   return new Promise(resolve => {
+//     const time = getRandomTime(2000, 3500);
+
+//     setTimeout(() => {
+//       resolve({ horse, time });
+//     }, time);
+//   });
+// }
+
+// function getRandomTime(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
