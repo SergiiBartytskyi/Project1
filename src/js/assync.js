@@ -1515,3 +1515,506 @@ Promise 1
 // function getRandomTime(min, max) {
 //   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
+//
+//
+
+//
+//
+//
+//                          Рисіч
+//                          -----
+//
+// for (let i = 3; i > 0; i--) {
+//   const delay = i * 1000;
+//   setTimeout(() => console.log(i), delay);
+// }
+// 1,2,3
+//
+//
+
+//
+//
+// console.time('test async');
+
+// console.log('start');
+
+// // setTimeout(() => {
+// //   console.log('setTimeout');
+// // }, 0);
+
+// for (let i = 0; i < 100000; i++) {
+//   console.log('value', i);
+// }
+
+// // console.timeEnd('test async');
+// console.log('finish');
+//
+//
+
+//
+//
+//                          Date
+//                          ----
+//
+// const date = new Date();
+// console.log(date);
+
+// console.log(date.getMonth());
+// const namesOfMonth = [
+//   'Січень',
+//   'Лютий',
+//   'Березень',
+//   'Квітень',
+//   'Травень',
+//   'Червень',
+//   'Липень',
+//   'Серпень',
+//   'Вересень',
+//   'Жовтень',
+//   'Листопад',
+//   'Грудень',
+// ];
+
+// const arrDay = [
+//   'Неділя',
+//   'Понеділок',
+//   'Вівторок',
+//   'Середа',
+//   'Четвер',
+//   'П`ятниця',
+//   'Субота',
+// ];
+// console.log(namesOfMonth[date.getMonth()]); // Квітень
+
+// console.log(arrDay[date.getDay()]); // Понеділок
+//
+//
+
+//
+//
+//                        Timer
+//                        -----
+//
+// const box = document.querySelector('.js-box');
+// const titleTimer = document.querySelector('.js-timer');
+// let counter = 11;
+
+// setTimeout(() => {
+//   box.style.display = 'block';
+
+//   const idInterval = setInterval(() => {
+//     counter -= 1;
+//     titleTimer.textContent = counter;
+
+//     if (!counter) {
+//       clearInterval(idInterval);
+//       titleTimer.textContent = 'X';
+//       // box.style.display = 'none';
+//       titleTimer.addEventListener('click', onClick);
+//     }
+//   }, 1000);
+// }, 1000);
+
+// function onClick() {
+//   box.style.display = 'none';
+// }
+//
+//
+
+//
+//
+//                            Calendar
+//                            --------
+//
+// const day = document.querySelector('.date-day');
+// const date = document.querySelector('.js-date');
+// const month = document.querySelector('.date-month');
+// const year = document.querySelector('.date-year');
+// const digitalClock = document.querySelector('.digital-clock');
+// const arrowSeconds = document.querySelector('.clock-seconds__arrow');
+// const arrowMinutes = document.querySelector('.clock-minutes__arrow');
+// const arrowHours = document.querySelector('.clock-hours__arrow');
+
+// const namesOfMonth = [
+//   'Січень',
+//   'Лютий',
+//   'Березень',
+//   'Квітень',
+//   'Травень',
+//   'Червень',
+//   'Липень',
+//   'Серпень',
+//   'Вересень',
+//   'Жовтень',
+//   'Листопад',
+//   'Грудень',
+// ];
+
+// const arrDay = [
+//   'Неділя',
+//   'Понеділок',
+//   'Вівторок',
+//   'Середа',
+//   'Четвер',
+//   'П`ятниця',
+//   'Субота',
+// ];
+
+// setInterval(() => {
+//   const currentTime = new Date();
+//   const currentDay = arrDay[currentTime.getDay()];
+//   const currentDate = currentTime.getDate();
+//   const currentMonth = namesOfMonth[currentTime.getMonth()];
+//   const currentYear = currentTime.getFullYear();
+//   const currentHours = currentTime.getHours();
+//   const currentMinutes = currentTime.getMinutes();
+//   const currentSeconds = currentTime.getSeconds();
+
+//   // console.log(currentMilliseconds);
+//   const changeSeconds = (360 / 60) * currentSeconds; //6°
+
+//   // const changeMinutes = (360 / 60) * currentMinutes; //6°
+//   const changeMinutes =
+//     (360 / 60) * currentMinutes + (360 / 60 / 60) * currentSeconds;
+//   // const changeHours =
+//   //   (360 / 12) * currentHours + (360 / 60) * Math.floor(currentMinutes / 12);
+//   const changeHours =
+//     (360 / 12) * currentHours + (360 / 12 / 60) * currentMinutes;
+
+//   const formatTime = `${currentHours
+//     .toString()
+//     .padStart(2, '0')} : ${currentMinutes
+//     .toString()
+//     .padStart(2, '0')} : ${currentSeconds.toString().padStart(2, '0')}`;
+//   // console.log(currentHour, currentMinutes, currentSeconds);
+//   console.log(formatTime);
+
+//   day.textContent = currentDay;
+//   date.textContent = currentDate;
+//   month.textContent = currentMonth;
+//   year.textContent = currentYear;
+//   digitalClock.textContent = `Поточний час ${formatTime}`;
+
+//   arrowSeconds.style.transform = `rotate(${changeSeconds}deg)`;
+//   arrowMinutes.style.transform = `rotate(${changeMinutes}deg)`;
+//   arrowHours.style.transform = `rotate(${changeHours}deg)`;
+// }, 1000);
+//
+//
+
+//
+//
+//                            Зворотній відлік
+//
+// const targetDate = new Date('4/04/2024');
+//
+// setInterval(() => {
+//   const currentDate = new Date();
+//   // console.log(currentDate);
+//   // console.log(targetDate);
+//   console.log(convertMs(targetDate - currentDate));
+// }, 1000);
+
+// function convertMs(ms) {
+//   // Number of milliseconds per unit of time
+//   const second = 1000;
+//   const minute = second * 60;
+//   const hour = minute * 60;
+//   const day = hour * 24;
+
+//   // Remaining days
+//   const days = Math.floor(ms / day);
+//   // Remaining hours
+//   const hours = Math.floor((ms % day) / hour);
+//   // Remaining minutes
+//   const minutes = Math.floor(((ms % day) % hour) / minute);
+//   // Remaining seconds
+//   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+
+//   return { days, hours, minutes, seconds };
+// }
+//
+//
+
+//
+//
+//                                  Promise (Рисіч)
+//                                  --------------
+//
+// const promise = new Promise(resolve => {
+//   resolve(10);
+// });
+
+// promise
+//   .then(value => {
+//     return new Promise(resolve => {
+//       resolve(value * 2);
+//     });
+//   })
+//   .then(value => {
+//     new Promise(resolve => {
+//       resolve(value * 2);
+//     });
+//   })
+//   .then(value => console.log(value));
+//
+//
+
+//
+//
+//                          Шпаргалка
+//                          --------
+//
+// 1. Мікро-процеси мають більший пріоритет, ніж макро-процеси.
+//
+//     * Мікропроцеси:
+//      -------------
+// - Promise;
+// - ResizeObserver;
+//
+//     * Макропроцеси:
+//      -------------
+// - setTimeout;
+// - setInterval;
+// - setImmediate;
+// - requestAnimationFrame;
+//
+// console.log('1');
+
+// setTimeout(() => console.log('2'), 0);
+
+// Promise.resolve('3').then(value => console.log(value));
+
+// console.log('4');
+
+// // 1 -> 4 -> 3 -> 2
+//
+//
+
+//
+//
+// console.log('1');
+
+// setTimeout(() => console.log('2'), 10);
+
+// Promise.resolve('3').then(value => console.log(value));
+
+// setTimeout(() => console.log('4'), 0);
+
+// console.log('5');
+
+// // 1 -> 5 -> 3 -> 4 -> 2
+//
+//
+
+//
+//
+// console.log('1');
+
+// setTimeout(() => console.log('2'), 10);
+
+// Promise.resolve('3').then(value => console.log(value));
+
+// Promise.reject('4')
+//   .then(value => console.log(value))
+//   .catch(err => console.log(err));
+
+// Promise.resolve('5').then(value => console.log(value));
+
+// setTimeout(() => console.log('6'), 0);
+
+// console.log('7');
+
+// // 1 -> 7 -> 3 -> 5 -> 4 -> 6 -> 2
+//
+//
+
+//
+//
+// console.log('1');
+
+// setTimeout(() => {
+//   console.log('2');
+//   Promise.resolve('3').then(value => console.log(value));
+// }, 10);
+// console.log('4');
+
+// // 1 -> 4 -> 2 -> 3
+//
+//
+
+//
+//
+// console.log('1');
+
+// setTimeout(() => {
+//   console.log('2');
+//   Promise.resolve('3').then(value => console.log(value));
+// }, 10);
+
+// setTimeout(() => {
+//   console.log('4');
+//   Promise.resolve('5').then(value => console.log(value));
+// }, 5);
+
+// console.log('6');
+
+// // 1 -> 6 -> 4 -> 5 -> 2 -> 3
+//
+//
+
+//
+//
+// console.log('1');
+
+// setTimeout(() => {
+//   console.log('2');
+//   Promise.resolve('3').then(value => console.log(value));
+// }, 10);
+
+// setTimeout(() => {
+//   console.log('4');
+//   Promise.resolve('5').then(value => console.log(value));
+// }, 5);
+
+// setTimeout(() => console.log('6'), 5);
+
+// console.log('7');
+
+// // 1 -> 7 -> 4 -> 5 -> 6 -> 2 -> 3
+//
+//
+
+//
+//
+// const promise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     const val = Math.random();
+//     if (val > 0.5) {
+//       res('Yeees');
+//     } else {
+//       rej('Noooo');
+//     }
+//   }, 1000);
+// });
+
+// promise
+//   .then(value => {
+//     return value + '🎃';
+//   })
+//   .then(value => {
+//     console.log(value, qwerty);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   })
+//   .finally(() => {
+//     console.log('after');
+//   });
+//
+//
+
+//
+//
+//                          fetch
+//                          -----
+//
+// const promise = fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+// console.log(promise);
+// promise
+//   .then(resp => resp.json())
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+//
+//
+
+//
+//
+//                            Game - promise
+//                            --------------
+//
+// const refs = {
+//   startBtn: document.querySelector('.js-start'),
+//   container: document.querySelector('.js-container'),
+// };
+
+// refs.startBtn.addEventListener('click', onClick);
+
+// function onClick() {
+//   const result = [];
+//   [...refs.container.children].forEach(box => (box.textContent = ''));
+//   [...refs.container.children].forEach((box, i) => {
+//     return createPromise(i)
+//       .then(smile => {
+//         box.textContent = smile;
+//         result.push('1');
+//       })
+//       .catch(smile => (box.textContent = smile))
+//       .finally(() => {
+//         setTimeout(() => {
+//           if (i === refs.container.children.length - 1) {
+//             if (!result.length || result.length === 3) {
+//               alert('Winner');
+//             } else {
+//               alert('Lose');
+//             }
+//           }
+//         }, 500);
+//       });
+//   });
+// }
+
+// function createPromise(delay) {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       const random = Math.random();
+
+//       if (random > 0.5) {
+//         res('🤑');
+//       } else {
+//         rej('🥵');
+//       }
+//     }, 1000 * delay);
+//   });
+// }
+
+//                          Приклад з Promise.allSettled
+//                          ----------------------------
+//
+// function onClick() {
+//   let counter = 0;
+//   [...refs.container.children].forEach(box => (box.textContent = ''));
+//   const promises = [...refs.container.children].map((_, i) => createPromise(i));
+//   Promise.allSettled(promises).then(items => {
+//     items.forEach((item, i) => {
+//       setTimeout(() => {
+//         if (item.status === 'fulfilled') {
+//           counter += 1;
+//         }
+//         refs.container.children[i].textContent = item.value || item.reason;
+
+//         if (i === refs.container.children.length - 1) {
+//           setTimeout(() => {
+//             if (counter === refs.container.children.length || !counter) {
+//               alert('Winner');
+//             } else {
+//               alert('Lose');
+//             }
+//           }, 500);
+//         }
+//       }, i * 1000);
+//     });
+//   });
+// }
+
+// function createPromise() {
+//   return new Promise((res, rej) => {
+//     const random = Math.random();
+
+//     if (random > 0.5) {
+//       res('🤑');
+//     } else {
+//       rej('🥵');
+//     }
+//   });
+// }
