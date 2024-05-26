@@ -1,4 +1,5 @@
 import BSN from 'bootstrap.native';
+import { da } from 'date-fns/locale';
 
 // console.log("First log");
 // console.log("Second log");
@@ -2018,3 +2019,192 @@ Promise 1
 //     }
 //   });
 // }
+//
+//
+
+//
+//
+//                              Бардачев
+//                              --------
+//
+const newYearDate = new Date('2025-01-01 00:00');
+// const todayDate = new Date();
+// const diff = newYearDate - todayDate;
+// console.log(diff);
+
+// function createTimer(ml) {
+//   const seconds = Math.floor(ml / 1000) % 60;
+//   const minutes = Math.floor(ml / 1000 / 60) % 60;
+//   const hours = Math.floor(ml / 1000 / 60 / 60) % 24;
+//   const days = Math.floor(ml / 1000 / 60 / 60 / 24);
+
+//   return { days, hours, minutes, seconds };
+// }
+// console.log(createTimer(diff));
+
+// 2 спосіб
+// const daysRef = document.querySelector('.js-clock [data-value="days"]');
+// const hoursRef = document.querySelector('.js-clock [data-value="hours"]');
+// const minutesRef = document.querySelector('.js-clock [data-value="minutes"]');
+// const secondsRef = document.querySelector('.js-clock [data-value="seconds"]');
+
+// const oneMinute = 1000 * 60;
+// const oneHour = oneMinute * 60;
+// const oneDay = oneHour * 24;
+
+// function clb() {
+//   // const todayDate = new Date();
+//   // const diff = newYearDate - todayDate;
+
+//   // const days = Math.floor(diff / oneDay);
+//   // const hours = Math.floor((diff % oneDay) / oneHour);
+//   // const minutes = Math.floor((diff % oneHour) / oneMinute);
+//   // const seconds = Math.floor((diff % oneMinute) / 1000);
+
+//   // daysRef.textContent = pad(days);
+//   // hoursRef.textContent = pad(hours);
+//   // minutesRef.textContent = pad(minutes);
+//   // secondsRef.textContent = pad(seconds);
+// }
+
+// setInterval(clb, 1000);
+
+// function pad(item) {
+//   return item.toString().padStart(2, '0');
+// }
+
+// 3 спосіб - Класси
+//
+// class CountdownTimer {
+//   constructor({ selector, targetDate }) {
+//     this.selector = selector;
+//     this.targetDate = targetDate;
+//     this.refs = {
+//       daysRef: document.querySelector(`${this.selector} [data-value="days"]`),
+//       hoursRef: document.querySelector(`${this.selector} [data-value="hours"]`),
+//       minutesRef: document.querySelector(
+//         `${this.selector} [data-value="minutes"]`
+//       ),
+//       secondsRef: document.querySelector(
+//         `${this.selector} [data-value="seconds"]`
+//       ),
+//     };
+//   }
+
+//   getDate() {
+//     const todayDate = new Date();
+//     const diff = this.targetDate - todayDate;
+
+//     const oneMinute = 1000 * 60;
+//     const oneHour = oneMinute * 60;
+//     const oneDay = oneHour * 24;
+
+//     const days = Math.floor(diff / oneDay);
+//     const hours = Math.floor((diff % oneDay) / oneHour);
+//     const minutes = Math.floor((diff % oneHour) / oneMinute);
+//     const seconds = Math.floor((diff % oneMinute) / 1000);
+
+//     return { days, hours, minutes, seconds };
+//   }
+
+//   pad(item) {
+//     return item.toString().padStart(2, '0');
+//   }
+
+//   updateContent() {
+//     const { days, hours, minutes, seconds } = this.getDate();
+
+//     this.refs.daysRef.textContent = this.pad(days);
+//     this.refs.hoursRef.textContent = this.pad(hours);
+//     this.refs.minutesRef.textContent = this.pad(minutes);
+//     this.refs.secondsRef.textContent = this.pad(seconds);
+//   }
+
+//   startTimer() {
+//     this.countDownId = setInterval(() => {
+//       this.updateContent();
+//     }, 1000);
+//   }
+
+//   stopCountDown() {
+//     clearInterval(this.countDownId);
+//   }
+// }
+
+// const timer = new CountdownTimer({
+//   selector: '#clock',
+//   targetDate: new Date('January, 01 2025 00:00:00'),
+// });
+
+// timer.startTimer();
+
+// const stopBtn = document.querySelector('#stopCountdown');
+// stopBtn.addEventListener('click', e => {
+//   timer.stopCountDown();
+// });
+//
+//
+
+//
+//
+//
+// console.log('A');
+
+// const promise = new Promise(resolve => {
+//   resolve('B');
+// });
+
+// promise.then(value => console.log(value));
+
+// console.log('C');
+// A -> C -> B
+//
+//
+
+//
+//
+// console.log('before promise');
+
+// const promise = new Promise((res, rej) => {
+//   console.log('first intro inside promise');
+
+//   setTimeout(() => {
+//     res("I'm promise");
+//   }, 3000);
+
+//   console.log('second intro inside promise');
+// });
+
+// console.log('after promise');
+
+// promise
+//   .then(res => console.log('Promise res = ', res))
+//   .catch(err => console.error(err));
+//
+//
+
+//
+//
+//
+// const usersPromise = fetch('https://api.github.com/users');
+// const ulRef = document.getElementById('users');
+
+// usersPromise
+//   .then(response => {
+//     const parsed = response.json();
+//     return parsed;
+//     // console.log(usersList);
+//   })
+//   .then(usersList => {
+//     usersList.forEach(el => {
+//       return ulRef.insertAdjacentHTML(
+//         'beforeend',
+//         `<li>${el.login} ${el.id}</li>`
+//       );
+//     });
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
+//
+//

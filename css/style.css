@@ -1586,7 +1586,7 @@ body {
 */
 
 /* 		//			//			//		Promise */
-
+/*
 .js-start {
 	margin-top: 20px;
 	margin-left: 55px;
@@ -1601,7 +1601,6 @@ body {
 .item {
 
 	display: inline-flex;
-	/* flex-wrap: wrap; */
 	width: 50px;
 	height: 50px;
 	border: 1px solid #000;
@@ -1609,3 +1608,190 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+*/
+
+/* Бардачев */
+
+/* #clock {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+} */
+
+/*
+*/
+
+/*			Backend			*/
+
+/* body {
+	margin: 16px;
+	line-height: 1.5;
+	color: #212121;
+	font-family: sans-serif;
+}
+
+p {
+	margin: 0;
+}
+
+.user-list {
+	margin: 0;
+	list-style: none;
+	padding: 24px;
+}
+
+.user-list li:not(:last-child) {
+	margin-bottom: 16px;
+} */
+
+/*  */
+
+/* 		//		//		//		Pokemon */
+/* ul {
+	margin: 0;
+	list-style: none;
+}
+
+.card-img-top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+.list-group-item {
+	border: 1px solid gray;
+	margin-bottom: 3px;
+	text-align: center;
+}
+
+.form-inline {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+} */
+
+/*  */
+
+
+/* 			//			//			NewsApi */
+/* img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+} */
+
+/* .search-form {
+	display: flex;
+	justify-content: center;
+	padding: 8px;
+	margin-bottom: 24px;
+}
+
+.button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button.is-hidden {
+	display: none;
+}
+
+.button>.spinner.is-hidden {
+	display: none;
+} */
+
+/* Article List */
+/* .articles {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 20px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	max-width: calc(100vw - 80px);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.articles li {
+	height: 450px;
+	overflow: hidden;
+}
+
+.articles img {
+	display: block;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.articles a {
+	text-decoration: none;
+	color: #2a2a2a;
+} */
+
+/* Бардичев */
+
+/* img {
+	display: block;
+	max-width: 300px;
+	height: auto;
+}
+
+section#articles {
+
+	width: 80vw;
+} */
+
+/* article.news {
+	border-radius: 4px;
+	border: 1px solid rgb(100, 98, 98);
+	margin-right: 15px;
+	margin-bottom: 10px;
+} */
+
+/*  */
+
+
+/*  */
+
+/* ToDoList */
+
+/* ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.box-green {
+	width: 200px;
+	height: 50px;
+	background-color: green;
+	margin-right: 10px;
+}
+
+.box-red {
+	width: 200px;
+	height: 50px;
+	background-color: red;
+}
+
+.input-js {
+	border: 2px solid aqua;
+	outline: none;
+	width: 198px;
+} */
