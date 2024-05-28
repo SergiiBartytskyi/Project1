@@ -115,3 +115,25 @@
 // console.log(builder.getValue()); // "^.^"
 // builder.padBoth('=');
 // console.log(builder.getValue()); // "=^.^="
+
+// ==========================================
+
+// const objA = {
+//   name: 'Alice',
+//   hello: () => {
+//     console.log(this.name);
+//   },
+// };
+
+// const objB = {
+//   name: 'Kate',
+//   hello() {
+//     objA.hello();
+//   },
+// };
+
+// objB.hello();
+
+// function hello() {
+//   console.log(this.name);
+// }
